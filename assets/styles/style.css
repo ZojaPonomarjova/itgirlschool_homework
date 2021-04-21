@@ -1,0 +1,165 @@
+a:hover {
+    color: blue
+}
+
+li:nth-child(n) {
+    list-style-type: none;
+}
+
+a:nth-child(n) {
+    text-decoration: none;
+}
+
+/*кнопки*/
+
+.button {
+    color: white;
+    background-color: #01996D;
+
+    border-radius: 10px;
+
+    font-family: 'Lato', arial, sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+header .button {
+    height: 51px;
+    width: 183px;
+}
+
+main .button {
+    height: 65px;
+    width: 240px;
+}
+
+/*шрифты*/
+
+.mainmenu,
+.sign,
+.littletext,
+.bigtext {
+    font-family: 'Lato', arial, sans-serif;
+    color: black;
+}
+
+.mainmenu,
+.sign,
+.littletext {
+    font-size: 20px;
+}
+
+.mainmenu,
+.littletext {
+    font-weight: 500;
+}
+
+.sign {
+    font-weight: 400;
+}
+
+.bigtext {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.whitetext,
+.footermenu {
+    font-family: 'Lato', arial, sans-serif;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1 {
+    color: #01996D;
+    font-size: 4em;
+}
+
+.h2green {
+
+    color: #01996D;
+    font-size: 50px;
+}
+
+
+h2:not(.h2green) {
+    color: white;
+    font-size: 50px;
+}
+
+h3 {
+    color: black;
+    font-size: 30px;
+}
+
+/*background*/
+#mainsection {
+    background-image: url(/assets/images/BG.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+#thirdsection,
+.footer {
+    background-color: #245852;
+}
+
+/*размер и позиционирование*/
+.header,
+.mainmenu,
+.footer {
+    display: flex;
+}
+
+li {
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.header {
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mainmenu {
+    margin-inline: 20px;
+}
+
+#logofooter,
+.footermenu1 {
+    margin-left: 10vw;
+
+}
+
+.footer {
+    flex-direction: column;
+    height: 50vh;
+    justify-content: space-around;
+}
+
+.footermenu1 {
+    align-items: flex-start;
+    padding-left: 0px;
+}
+
+.lifooter {
+    margin-bottom: 40px;
+}
+
+#logofooter {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
