@@ -51,17 +51,14 @@ main .button {
 }
 
 .mainmenu,
-.littletext {
-    font-weight: 500;
-}
-
+.littletext,
 .sign {
     font-weight: 400;
 }
 
 .bigtext {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .whitetext,
@@ -69,7 +66,7 @@ main .button {
     font-family: 'Lato', arial, sans-serif;
     color: white;
     font-size: 1.5em;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .whitetext {
