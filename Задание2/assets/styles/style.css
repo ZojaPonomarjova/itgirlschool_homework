@@ -1,0 +1,89 @@
+.header {
+    display: flex;
+    justify-content: center;
+
+    height: 8vh;
+}
+
+
+.section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    background-color: lemonchiffon;
+}
+
+.main {
+    display: flex;
+    justify-content: stretch;
+
+    height: 82vh;
+
+}
+
+.aside {
+    display: flex;
+    justify-content: center;
+
+    width: 30vw;
+
+    background-color: rgb(175, 241, 175);
+}
+
+.h1 {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.threesections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    height: 50%;
+}
+
+#div1,
+#div2 {
+    width: 48%;
+    margin-bottom: 1%;
+
+    text-align: center;
+
+    background-color: lightsalmon;
+}
+
+#div3 {
+    width: 98%;
+    margin-bottom: 1%;
+
+    text-align: center;
+
+    background-color: lightsalmon;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    height: 10vh;
+}
+
+.footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 20%;
+    margin: 0.5%;
+
+    background-color: white;
+}
+
+.footer,
+.header {
+    background-color: gray;
+}
