@@ -68,8 +68,12 @@ main .button {
 .footermenu {
     font-family: 'Lato', arial, sans-serif;
     color: white;
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: 600;
+}
+
+.whitetext {
+    margin-bottom: 65px;
 }
 
 h1,
@@ -88,18 +92,19 @@ h1 {
 .h2green {
 
     color: #01996D;
-    font-size: 50px;
+    font-size: 2.5em;
 }
 
 
 h2:not(.h2green) {
     color: white;
-    font-size: 50px;
+    font-size: 2.5em;
 }
 
 h3 {
     color: black;
-    font-size: 30px;
+    font-size: 2em;
+    text-align: center;
 }
 
 /*background*/
@@ -115,15 +120,39 @@ h3 {
 #thirdsection,
 .footer {
     background-color: #245852;
+    width: 100vw;
+}
+
+#align-top1 {
+    background-image: url(/assets/images/01.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
+}
+
+#align-bottom {
+    background-image: url(/assets/images/02.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
+
+}
+
+#align-top2 {
+    background-image: url(/assets/images/03.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
 }
 
 /*размер и позиционирование*/
 .header,
 .mainmenu,
-.footer {
+.footer,
+.flex-container,
+#howitworks,
+#threesteps {
     display: flex;
 }
 
+/*header*/
 li {
     justify-content: space-around;
     flex-direction: row;
@@ -138,6 +167,12 @@ li {
     margin-inline: 20px;
 }
 
+#logo {
+    width: 15vw;
+    height: auto;
+}
+
+/*footer*/
 #logofooter,
 .footermenu1 {
     margin-left: 10vw;
@@ -147,19 +182,158 @@ li {
 .footer {
     flex-direction: column;
     height: 50vh;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
 .footermenu1 {
     align-items: flex-start;
-    padding-left: 0px;
+    padding-left: 0%;
 }
 
 .lifooter {
-    margin-bottom: 40px;
+    margin-top: 3%;
 }
 
 #logofooter {
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-top: 1%;
+
+}
+
+/*main*/
+h1 {
+    width: 30vw;
+    height: auto;
+}
+
+#mainsection p {
+    width: 27vw;
+    height: 17vh;
+}
+
+#mainsection_content {
+    margin-left: 10vw;
+    margin-top: 10vh;
+
+    height: fit-content;
+}
+
+h2 {
+    width: 35vw;
+    height: auto;
+}
+
+#secondsection {
+    flex-direction: column;
+    justify-content: center;
+
+    height: 170vh;
+}
+
+#howitworks .littletext {
+    width: 40vw;
+    height: auto;
+}
+
+#howitworks div {
+    height: 40vh;
+}
+
+#howitworks {
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: center;
+
+    height: fit-content;
+    width: 100vw;
+
+}
+
+.secondsectionphoto {
+    width: 25vw;
+    height: auto;
+}
+
+#first {
+    width: 25vw;
+    height: auto;
+}
+
+#second {
+    width: 25vw;
+    height: auto;
+}
+
+#third {
+    width: 25vw;
+    height: auto;
+}
+
+#align-bottom {
+    align-self: flex-end;
+}
+
+#threesteps {
+    justify-content: space-around;
+
+    width: 100vw;
+    height: 120vh;
+}
+
+#thirdsection object {
+    width: auto;
+    height: 65%;
+
+}
+
+#thirdsection {
+    justify-content: center;
+    align-items: center;
+
+    height: 90vh;
+}
+
+#thirdsection div {
+    margin-bottom: 8vh;
+}
+
+#anothergirl {
+    width: 35%;
+    height: auto;
+
+    margin-left: -10vw;
+}
+
+#customcontents {
+    width: 20%;
+    height: auto;
+
+    z-index: 1;
+    margin-top: 45vh;
+}
+
+#fourthsection {
+    align-items: center;
+    justify-content: center;
+
+    height: 110vh;
+}
+
+#fourthsection div {
+    width: 30%;
+
+    margin-top: 0%;
+    margin-left: 2%;
+}
+
+#fourthsection p {
+    margin-bottom: 5vh;
+}
+
+#fourthsection .bigtext {
+    margin-top: 0%;
+}
+
+#fourthsection h2 {
+    margin-bottom: 1%;
 }
