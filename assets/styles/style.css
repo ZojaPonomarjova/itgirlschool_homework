@@ -89,6 +89,7 @@ h1 {
 .h2green {
     color: #01996D;
     font-size: 2.5em;
+    hyphens: auto;
 }
 
 
@@ -103,8 +104,9 @@ h3 {
     text-align: center;
 }
 
-#align_bottom h3 {
+#write {
     overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 /*background*/
@@ -196,21 +198,22 @@ li {
     flex-direction: column;
     justify-content: flex-end;
 
-    height: 50vh;
+    height: 55vh;
 }
 
 .footermenu1 {
     align-items: flex-start;
 
     padding-left: 0%;
+    margin-top: 5vh;
 }
 
 .lifooter {
-    margin-top: 3%;
+    margin-bottom: 6vh;
 }
 
 #logofooter {
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 /*main*/
@@ -240,6 +243,7 @@ h1 {
 h2 {
     width: 35vw;
     height: auto;
+
 }
 
 #secondsection {
