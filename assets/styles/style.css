@@ -111,7 +111,7 @@ h3 {
 
 /*background*/
 #mainsection {
-    background-image: url(/assets/images/BG.png);
+    background-image: url(../images/BG.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -127,20 +127,20 @@ h3 {
 }
 
 #align-top1 {
-    background-image: url(/assets/images/01.png);
+    background-image: url(../images/01.png);
     background-repeat: no-repeat;
     background-size: 150px;
 }
 
 #align-bottom {
-    background-image: url(/assets/images/02.png);
+    background-image: url(../images/02.png);
     background-repeat: no-repeat;
     background-size: 150px;
 
 }
 
 #align-top2 {
-    background-image: url(/assets/images/03.png);
+    background-image: url(../images/03.png);
     background-repeat: no-repeat;
     background-size: 150px;
 }
