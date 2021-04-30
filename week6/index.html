@@ -1,72 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore and Travel</title>
-    <link rel="shortcut icon" href="/week6/assets/images/logo.png"        type="image/png">
-        <link rel="stylesheet" href="../assets/styles/normalize.css">
+    <link rel="shortcut icon" href="/week6/assets/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="/week6/assets/styles/normalize.css">
+    <link rel="stylesheet" href="/week6/assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Mulish:wght@300;400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+
+
+
+    </style>
 </head>
+
 <body>
     <header class="header">
-        <img src="/week6/assets/images/logo.png" alt="logo">
-        <nav><ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Destinations</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Partner</a></li>
-                    </ul></nav>
+        <img src="/week6/assets/images/logo.png" alt="logo" class="logo">
+        <nav class="mainmenu">
+            <ul class="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="">Destinations</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Partner</a></li>
+            </ul>
+        </nav>
         <input type="button" value="Login" class="whitebutton">
-            <input type="button" value="Register" class="orangebutton">
+        <input type="button" value="Register" class="orangebutton">
     </header>
-    <main>
-        <section>
+
+    <main class="main">
+        <section class="firstsection">
             <h1>Explore and Travel</h1>
-            <p>Holiday finder</p>
-            <img src="/week6/assets/images/Rectangle29.png" alt="line">
-            <select name="Location" id="Location">
+            <img src="/week6/assets/images/element1.png" alt="plus" class="plus">
+            <div class="conteiner">
+                <p>Holiday finder</p>
+                <img src="/week6/assets/images/Rectangle29.png" alt="smallline">
+            </div>
+            <img src="/week6/assets/images/element2.png" alt="circle" id="circle1">
+            <div id="conteiner4"><select name="Location" id="Location" class="select">
                 <option value="none" selected disabled hidden>Location</option>
             </select>
-            <select name="Location" id="Location">
+            <select name="Location" id="Activity" class="select">
                 <option value="none" selected disabled hidden>Activity</option>
             </select>
-            <select name="Location" id="Location">
+            <select name="Location" id="Grade" class="select">
                 <option value="none" selected disabled hidden>Grade</option>
             </select>
-            <select name="Location" id="Location">
+            <select name="Location" id="Date" class="select">
                 <option value="none" selected disabled hidden>Date</option>
             </select>
-            <input type="button" value="Explore" class="orangebutton">
-            <img src="/week6/assets/images/thousand-01-1.png" alt="walking man">
-            
+            <input type="button" value="Explore" id="explore"></div>
+            <img src="/week6/assets/images/element2.png" alt="circle" id="circle2">
+            <img src="/week6/assets/images/thousand-01-1.png" alt="walking man" class="walkingman">
         </section>
-        <section>
-            <img src="/week6/assets/images/Thousand-02-1.png" alt="hot air balloon">
+
+        <section class="secondsection">
+            <img src="/week6/assets/images/Thousand-02-1.png" alt="hot air balloon" class="hotairballoon">
+            <img src="/week6/assets/images/element1.png" alt="plus" class="plus" id="plus2">
             <h2>A new way to explore the world</h2>
-            <p>For decades travellers have reached for Lonely Planet books when looking to plan and execute their perfect trip, but now, they can also let Lonely Planet Experiences lead the way</p>
+            <p>For decades travellers have reached for Lonely Planet books when looking to plan and execute their
+                perfect trip, but now, they can also let Lonely Planet Experiences lead the way</p>
             <input type="button" value="Learn more" class="orangebutton">
+            <img src="/week6/assets/images/element2.png" alt="circle" class="circle" />
         </section>
-        <section>
+
+        <section class="thirdsection">
+            <img src="/week6/assets/images/element2.png" alt="circle" class="circle" id="circle3"/>
             <h2>Featured destinations</h2>
             <a href="">View all ></a>
-            <img src="/week6/assets/images/Rajaampat.png" alt="Raja Ampat">
-            <img src="/week6/assets/images/Fanjingshan.png" alt="Fanjingshan">
-            <img src="/week6/assets/images/Vevey.png" alt="Vevey">
-            <img src="/week6/assets/images/Skadar.png" alt="Skadar">
+            <img src="/week6/assets/images/element1.png" alt="plus" class="plus"/>
+            <div id="conteiner2"><img src="/week6/assets/images/Rajaampat.png" alt="Raja Ampat" id="rajaampat">
+            <img src="/week6/assets/images/Fanjingshan.png" alt="Fanjingshan" id="fanjingshan">
+            <img src="/week6/assets/images/Vevey.png" alt="Vevey" id="vevey">
+            <img src="/week6/assets/images/Skadar.png" alt="Skadar" id="skadar"></div>
+            <img src="/week6/assets/images/element2.png" alt="circle" class="circle" id="circle6"/>
         </section>
-        <section>
-            <h2>Guides by Thousand Sunny</h2>
-            <p>Packed with tips and advice from our on-the-ground experts, our city guides app (iOS and Android) is the ultimate resource before and during a trip.</p>
-            <input type="button" value="Download" class="orangebutton">
-            <img src="/week6/assets/images/Thousand-03.png" alt="man with a phone">
-        </section>
-        <section>
-            <h2>Testimonials</h2>
-            <img src="/week6/assets/images/stars.png" alt="stars">
 
+        <section class="fourthsection">
+            <img src="/week6/assets/images/element2.png" alt="circle" class="circle"/>
+            <h2>Guides by Thousand Sunny</h2>
+            <p>Packed with tips and advice from our on-the-ground experts, our city guides app (iOS and Android) is the
+                ultimate resource before and during a trip.</p>
+            <input type="button" value="Download" class="orangebutton">
+            <img src="/week6/assets/images/element3.png" alt="plus1" class="plus1">
+            <img src="/week6/assets/images/Thousand-03.png" alt="man with a phone" class="manwithaphone">
+            <img src="/week6/assets/images/element1.png" alt="plus" class="plus"/>
         </section>
-        <section></section>
+
+                <section class="fifthsection">
+            <h2>Testimonials</h2>
+            <img src="/week6/assets/images/element2.png" alt="circle" class="circle"/>
+            <img src="/week6/assets/images/stars.png" alt="stars" id="stars">
+            <figure class="quote">
+                <blockquote>
+                    <p>
+                        “Quisque in lacus a urna fermentum euismod. Integer mi nibh, dapibus ac scelerisque eu,
+                        facilisis quis purus. Morbi blandit sit amet turpis nec”
+                    </p>
+                </blockquote>
+                <figcaption>
+                    Edward Newgate <br>
+                    <cite>Founder Circle</cite>
+                </figcaption>
+            </figure>
+            <img src="/week6/assets/images/photo.png" alt="Edward Newgate" id="edwardnewgate">
+        </section>
+
+        <section class="sixthsection">
+            <img src="/week6/assets/images/element1.png" alt="plus" class="plus"/>
+            <h2>Trending stories</h2>
+            <a href="">View all ></a>
+            <div id="conteiner3">
+                <figure>
+                <img src="/week6/assets/images/image12.png" alt="yoga" class="sixthsectionpicture">
+                <figcaption id="figcaption1">
+                    <h3>The many benefits of taking a healing holiday</h3>
+                    <p>‘Helaing holidays’ are on the rise tohelp maximise your health and happines...</p>
+                </figcaption>
+                <a href="">Read more</a>
+            </figure>
+            <figure>
+                <img src="/week6/assets/images/image13.png" alt="food" class="sixthsectionpicture">
+                <figcaption id="figcaption2">
+                    <h3>The best Kyoto restaurant to try Japanese food</h3>
+                    <p>From tofu to teahouses, here’s our guide to Kyoto’s best restaurants to visit...</p>
+                </figcaption>
+                <a href="">Read more</a>
+            </figure>
+            <figure>
+                <img src="/week6/assets/images/image14.png" alt="pyramid" class="sixthsectionpicture">
+                <figcaption id="figcaption3">
+                    <h3>Skip Chichen Itza and head to this remote Yucatan</h3>
+                    <p>It’s remote and challenging to get, but braving the jungle and exploring these ruins without
+                        the...</p>
+                </figcaption>
+                <a href="">Read more</a>
+            </figure>
+            <figure>
+                <img src="/week6/assets/images/image15.png" alt="surfing" class="sixthsectionpicture">
+                <figcaption id="figcaption4">
+                    <h3>Surf’s up at these beginner spots around the world</h3>
+                    <p>If learning to surf has in on your to- do list for a while, the good news is: it’s never too
+                        late...</p>
+                </figcaption>
+                <a href="">Read more</a>
+            </figure></div>
+            <img src="/week6/assets/images/element2.png" alt="circle" class="circle" id="circle4"/>
+            <img src="/week6/assets/images/element2.png" alt="circle" class="circle" id="circle5"/>
+        </section>
     </main>
+
+    <footer class="footer">
+        <img src="/week6/assets/images/logo.png" alt="logo" class="logo">
+            <p class="text">
+                Plan and book your perfect trip with expert advice, travel tips destination information from us
+            </p>
+            <p class="copyright">&copy; 2020 Thousand Sunny. All rights reserved</p>
+            <div id="destinations">
+            <h4>Destinations</h4>
+            <ul>
+                <li><a href="" class="link">Africa</a></li>
+                <li><a href="" class="link">Antarctica</a></li>
+                <li><a href="" class="link">Asia</a></li>
+                <li><a href="" class="link">Europe</a></li>
+                <li><a href="" class="link">America</a></li>
+            </ul>
+        </div>
+        <div id="shop">
+            <h4>Shop</h4>
+            <ul>
+                <li><a href="" class="link">Destination Guides</a></li>
+                <li><a href="" class="link">Pictorial & Gifts</a></li>
+                <li><a href="" class="link">Special Offers</a></li>
+                <li><a href="" class="link">Delivery Times</a></li>
+                <li><a href="" class="link">FAQs</a></li>
+            </ul>
+        </div>
+        <div id="interests">
+            <h4>Interests</h4>
+            <ul>
+                <li><a href="" class="link">Adventure Travel</a></li>
+                <li><a href="" class="link">Art And Culture</a></li>
+                <li><a href="" class="link">Wildlife And Nature</a></li>
+                <li><a href="" class="link">Family Holidays</a></li>
+                <li><a href="" class="link">Food And Drink</a></li>
+            </ul>
+        </div>
+        <img src="/week6/assets/images/Rectangle57.png" alt="line" id="footerline">
+        <div class="icons">
+            <a href=""><img src="/week6/assets/images/twitter.png" alt="twitter"></a>
+            <a href=""><img src="/week6/assets/images/facebook.png" alt="facebook"></a>
+            <a href=""><img src="/week6/assets/images/instagram.png" alt="instagram"></a>
+            <a href=""><img src="/week6/assets/images/ln.png" alt="in"></a>
+            <a href=""><img src="/week6/assets/images/youtube.png" alt="youtube"></a>
+        </div>
+    </footer>
 </body>
+
 </html>
