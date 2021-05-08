@@ -33,12 +33,13 @@ a:nth-child(n) {
     color: #FB8F1D;
     border: 1px solid #FB8F1D;
     background-color: white;
+    box-sizing: border-box;
 }
 
 .header .orangebutton {
     color: white;
     background-color: #FB8F1D;
-    border: 1px solid #FB8F1D;
+    border: none;
 }
 
 .main .orangebutton {
@@ -71,99 +72,98 @@ a:nth-child(n) {
 
 
 /*шрифты*/
-.nav a {
-    font-family: 'Inter', arial, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: #B8BECD;
-}
-
-.nav a:hover {
-    color: #57D2A3
+.main h1,
+h2 {
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+    font-weight: 700;
 }
 
 .main h1 {
-    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     font-size: 64px;
-    font-weight: 700;
-}
-
-.firstsection p {
-    font-family: 'Inter', arial, sans-serif;
-    font-size: 22px;
-    font-weight: 600;
 }
 
 h2 {
-    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     font-size: 36px;
-    font-weight: 700;
 }
 
-.secondsection p,
-.fourthsection p {
-    font-family: 'Mulish', arial, sans-serif;
-    font-size: 17px;
-    font-weight: 300;
-    color: #7D7987;
+.fifthsection figcaption,
+.sixthsection h3 {
+    font-family: 'Inter', arial, sans-serif;
+}
+
+.firstsection p,
+.thirdsection a,
+.sixthsection a {
+    font-family: 'Inter', arial, sans-serif;
+    font-weight: 600;
+}
+
+.nav a,
+.fifthsection cite,
+.sixthsection p {
+    font-family: 'Inter', arial, sans-serif;
+    font-weight: 400;
+}
+
+.nav a {
+    font-size: 16px;
+
+    color: #B8BECD;
+}
+
+.firstsection p {
+    font-size: 22px;
 }
 
 .thirdsection a,
 .sixthsection a {
-    color: #FB8F1D;
-    font-family: 'Inter', arial, sans-serif;
     font-size: 17px;
-    font-weight: 600;
-}
 
-.thirdsection a:hover {
-    color: #57D2A3
-}
-
-.sixthsection a:hover {
-    color: #57D2A3
-}
-
-.fifthsection blockquote {
-    font-family: 'Mulish', arial, sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    margin-left: 0px;
+    color: #FB8F1D;
 }
 
 .fifthsection figcaption {
-    font-family: 'Inter', arial, sans-serif;
     font-size: 22px;
     font-weight: 700;
 }
 
 .fifthsection cite {
-    font-family: 'Inter', arial, sans-serif;
     font-size: 18px;
-    font-weight: 400;
     font-style: normal;
 }
 
 .sixthsection h3 {
-    font-family: 'Inter', arial, sans-serif;
     font-size: 19px;
     font-weight: 700;
-    background-color: white;
-    z-index: 1;
 }
 
 .sixthsection p {
-    font-family: 'Inter', arial, sans-serif;
     font-size: 15px;
-    font-weight: 400;
+
     color: #7D7987;
-    background-color: white;
+}
+
+.secondsection p,
+.fourthsection p,
+.text,
+.copyright,
+#destinations a,
+#shop a,
+#interests a {
+    font-family: 'Mulish', arial, sans-serif;
+    font-weight: 300;
+}
+
+.secondsection p,
+.fourthsection p {
+    font-size: 17px;
+
+    color: #7D7987;
 }
 
 .text {
-    font-family: 'Mulish', arial, sans-serif;
     font-size: 18px;
-    font-weight: 300;
+
     color: #848484;
 }
 
@@ -171,16 +171,26 @@ h2 {
 #destinations a,
 #shop a,
 #interests a {
-    font-family: 'Mulish', arial, sans-serif;
     font-size: 17px;
-    font-weight: 300;
+
     color: #848484;
+}
+
+.fifthsection blockquote,
+h4 {
+    font-family: 'Mulish', arial, sans-serif;
+}
+
+.fifthsection blockquote {
+    font-size: 24px;
+    font-weight: 400;
+    margin-left: 0px;
 }
 
 h4 {
     margin-top: 0px;
     margin-bottom: 40px;
-    font-family: 'Mulish', arial, sans-serif;
+
     font-size: 19px;
     font-weight: 700;
 }
@@ -188,7 +198,9 @@ h4 {
 #destinations .link:hover,
 #shop .link:hover,
 #interests .link:hover,
-.icons a:hover {
+.nav a:hover,
+.thirdsection a:hover,
+.sixthsection a:hover {
     color: #57D2A3
 }
 
@@ -196,9 +208,8 @@ h4 {
 .header {
     display: grid;
     grid-template-rows: 0.5fr 1fr 1fr;
-    grid-template-columns: 10vw 41px 1fr 132px 132px 10vw;
+    grid-template-columns: 10vw 41px 0.5fr 1fr 10vw;
     gap: 10px;
-    justify-items: end;
 }
 
 .header .logo {
@@ -209,25 +220,28 @@ h4 {
     width: 41px;
 }
 
-.header .orangebutton {
-    grid-row: 2/3;
-    grid-column: 5/6;
+#conteiner5 {
+    grid-area: 2/4/3/5;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+    justify-items: end;
+    align-items: center;
 }
 
-.whitebutton {
-    grid-row: 2/3;
-    grid-column: 4/5;
+.nav {
+    padding: 0px;
 }
 
-.mainmenu {
-    grid-row: 2/3;
-    grid-column: 3/4;
+.buttons input:nth-child(n) {
+    margin: 10px;
 }
 
 .nav li {
     display: inline-block;
     margin-right: 25px;
 }
+
 
 .firstsection {
     display: grid;
@@ -255,9 +269,7 @@ h4 {
 .firstsection .plus {
     grid-column: 4/5;
     grid-row: 2/3;
-
 }
-
 
 #conteiner4 {
     grid-area: 5/2/8/4;
@@ -276,6 +288,7 @@ h4 {
     grid-column: 5/6;
     grid-row: 8/9;
 }
+
 
 .secondsection {
     display: grid;
@@ -313,6 +326,7 @@ h4 {
     grid-column: 5/6;
     grid-row: 5/6;
 }
+
 
 .thirdsection {
     display: grid;
@@ -362,6 +376,7 @@ h4 {
     align-self: center;
 }
 
+
 .fourthsection {
     display: grid;
     grid-template-columns: 12.5vw 1fr 80px 37.5vw 5vw 7vw;
@@ -408,6 +423,7 @@ h4 {
     grid-row: 6/7;
 }
 
+
 .fifthsection {
     display: grid;
     grid-template-columns: 12.5vw 1fr 24vw 17vw;
@@ -443,10 +459,11 @@ h4 {
     justify-self: center;
 }
 
+
 .sixthsection {
     display: grid;
     grid-template-columns: 12vw 1fr 1.5fr 12vw;
-    grid-template-rows: 25vh 15vh 1fr 0.5fr 0.5fr 20vh;
+    grid-template-rows: 25vh 15vh 1fr 0.5fr 0.5fr 15vh;
 }
 
 #conteiner3 {
@@ -479,8 +496,6 @@ h4 {
     height: auto;
 
     border-radius: 7px 7px 0px 0px;
-
-
 }
 
 .sixthsection .plus {
@@ -507,9 +522,10 @@ h4 {
     width: 261px;
 }
 
+
 .footer {
     display: grid;
-    grid-template-columns: 10vw 2fr 1fr 1fr 1fr 5vw;
+    grid-template-columns: 10vw 1.5fr 85px 3fr 5vw;
     grid-template-rows: 10vh 60px 1fr 1fr 10px 10vh;
     gap: 30px;
 
@@ -531,26 +547,21 @@ h4 {
     grid-row: 4/5;
 }
 
-#destinations {
-    grid-area: 2/3/5/4;
-}
-
-#shop {
+#footerlinks {
     grid-area: 2/4/5/5;
-}
 
-#interests {
-    grid-area: 2/5/5/6;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .icons {
-    grid-area: 6/2/7/6;
+    grid-area: 6/1/7/6;
     justify-self: center;
     align-self: center;
 }
 
 #footerline {
-    grid-area: 5/2/6/6;
+    grid-area: 5/1/6/6;
     justify-self: center;
     align-self: center;
 }
