@@ -3,48 +3,28 @@
 <head>
     <meta charset="utf-8">
     <title>Document</title>
-    <link rel="stylesheet" href="/assets/styles/normalize.css">
     <style>
-        #square1{
-            width: 250px;
-            height: 250px;
-            background-color: red;
-        
-        }
-        #square2{
-            width: 250px;
-            height: 250px;
-            background-color: green;
-        
-        }
-        #square3{
-            width: 250px;
-            height: 250px;
-            background-color: blue;
-        
-        }
-        #square4{
-            width: 250px;
-            height: 250px;
-            background-color: violet;
-        
-        }
-
-        .first {
-            display: flex;
-            border: 1px solid black;
-            justify-content: space-between;
-            padding-left: 20px;
-        }
+.main {
+    display: grid;
+    grid-template-columns: 100px 30% 1fr;
+    grid-template-rows: 200px 100px;
+    gap: 5px;
+}
+.main div {
+    background-color: blue;
+    border: 5px solid black;
+}
     </style>
 </head>
 
 <body>
-    <div class="first">
+    <div class="main">
         <div id="square1"></div>
         <div id="square2"></div>
         <div id="square3"></div>
         <div id="square4"></div>
+        <div id="square5"></div>
+        <div id="square6"></div>
     </div>
 </body>
 
