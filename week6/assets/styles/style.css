@@ -429,14 +429,14 @@ h4 {
 
 .fifthsection {
     display: grid;
-    grid-template-columns: 12.5vw 1fr 24vw 17vw;
+    grid-template-columns: 12.5vw 1fr 24vw 20vw;
     grid-template-rows: 25vh 50px 145px 25px 1fr 15vh;
 }
 
 #edwardnewgate {
     grid-area: 3/3/7/4;
 
-    width: 25vw;
+    width: 26vw;
     height: auto;
 }
 
@@ -450,6 +450,8 @@ h4 {
     grid-column: 2/3;
     grid-row: 5/6;
     margin-left: 0px;
+
+    width: 32vw;
 }
 
 #stars {
