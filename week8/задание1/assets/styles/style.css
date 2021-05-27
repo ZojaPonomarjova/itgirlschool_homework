@@ -1,0 +1,47 @@
+.header__name,
+.active {
+    color: white;
+    margin-left: 11.5%;
+}
+
+.not-active {
+    color: #828383;
+}
+
+.main__section {
+    background-color: #e9ecef;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-image {
+    width: auto;
+    height: 150px;
+    background-color: #cccccc;
+    border-radius: 3px;
+}
+
+.first-conteiner {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.nav {
+    margin-right: 11%;
+}
+
+.footer__text {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    margin-bottom: 25px;
+}
