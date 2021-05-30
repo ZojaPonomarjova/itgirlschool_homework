@@ -1,0 +1,50 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.header__line {
+    color: #aeaeae;
+    width: 98vw;
+}
+
+.header__conteiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 90vw;
+
+}
+
+.header__name {
+    width: 13vw;
+    margin-left: 5px;
+}
+
+.header__logo-group {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    background-color: #5222D0;
+    color: white;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    border: #5222D0;
+}
+
+.header__button {
+    width: 115px;
+    height: 38px;
+    border-radius: 18px;
+
+    font-size: 16px;
+}
