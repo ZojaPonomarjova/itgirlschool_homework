@@ -44,4 +44,5 @@
 
 .row {
     margin-bottom: 25px;
+    gap: 10px;
 }
