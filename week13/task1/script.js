@@ -1,9 +1,9 @@
 
 function showMessage(from , message = 'привет') {
     if (from === null) {
-    from = 'Незнакомка';}
+    from = 'Аноним';}
     if (from === "") {
-    from = 'Незнакомка';}
+    from = 'Аноним';}
  return  (`${from}, ${message}!` );
  }  
 
