@@ -1,24 +1,34 @@
+function showMessage(){
+    alert('Пожалуйста, для ввода данных используйте только цифры!')
+}
+showMessage()
 
-function sum (a , b) {
-    return (Number(a) + Number(b));
+
+let num1
+let num2
+
+function enterNum1 (){
+        return (num1 = prompt ('Введите первое число')
+    )
+    }
+
+function enterNum2 (){
+    return (num2 = prompt ('Введите второе число')
+)
 }
 
-let result1 = sum(a , b);
-
-function subtract(a , b) {
-    return (Number(a) - Number(b));
+function sum (num1 , num2) {
+    return (Number(num1) + Number(num2))
 }
 
-let result2 = subtract(a , b);
-
-function multiply(a , b) {
-    return (Number(a) * Number(b));
+function subtract(num1 , num2) {
+    return (Number(num1) - Number(num2));
 }
 
-let result3 = multiply(a , b);
-
-function divide(a , b) {
-    return (Number(a) / Number(b));
+function multiply(num1 , num2) {
+    return (Number(num1) * Number(num2));
 }
 
-let result4 = divide(a , b);
+function divide(num1 , num2) {
+    return (Number(num1) / Number(num2));
+}
