@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 50px;
+            height: 50px;
+            font-size: 35px;
+            background-color: antiquewhite;
+            margin: 20px;
+        }
+
+        div{
+            height: 50px;
+            width: 400px;
+            border: 1px solid gray;
+            margin: 20px;
+            padding: 10px;
+        }
+        input{
+            margin: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" name="number" id="firstNumber" placeholder="Введите первое число">
+    <input type="number" name="number" id="secondNumber" placeholder="Введите второе число">
+    <div id="operationResult"></div>
+
+    <button onclick="document.getElementById('operationResult').innerText = sum()">+</button>
+    <button onclick="document.getElementById('operationResult').innerText = subtract()">-</button>
+    <button onclick="document.getElementById('operationResult').innerText = multiply()">*</button>
+    <button onclick="document.getElementById('operationResult').innerText = divide()">/</button>
+    <button id="clear">С</button>
+
+    <script src="./index.js"></script>
+</body>
+</html>
