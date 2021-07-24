@@ -1,0 +1,70 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 0% 20%;
+}
+
+
+button {
+    width: fit-content;
+    height: 25px;
+    background-color: lightgray;
+    border-radius: 10%;
+    padding: 15px;
+    border-color: dimgray;
+    display: flex;
+    align-items: center;
+}
+
+.img {
+    width: 400px;
+    max-width: 16.67%;
+    height: 300px;
+
+}
+
+.first-image {
+    background-image: url(./images/2862590383.jpg);
+    background-size: cover;
+}
+
+.second-image {
+    background-image: url(./images/burmanskaja-koshka-bolezni-1.jpg);
+    background-size: cover;
+}
+
+.third-image {
+    background-image: url(./images/go86YNkD5S8.jpg);
+    background-size: cover;
+}
+
+.fourth-image {
+    background-image: url(./images/NrI-dRQ0Skc.jpg);
+    background-size: cover;
+}
+
+.fifth-image {
+    background-image: url(./images/post_5b76fabe77f52.jpg);
+    background-size: cover;
+}
+
+.sixth-image {
+    background-image: url(./images/unnamed.jpg);
+    background-size: cover;
+}
+
+.slider {
+    overflow: hidden;
+    width: 400px;
+    height: 300px;
+}
+
+#slider-line {
+    width: 2400px;
+    display: flex;
+    position: relative;
+    left: 0px;
+    transition: all ease 1s;
+}
