@@ -1,18 +1,42 @@
-function getNums(){
-    let num1 = document.getElementById('firstNumber').value;
-    let num2 = document.getElementById('secondNumber').value;
+// function getNums(){
+//     let num1 = document.getElementById('firstNumber').value;
+//     let num2 = document.getElementById('secondNumber').value;
 
-    if (num1 === ""){
+//     if (num1 === ""){
+//         alert("Введите ваше число");
+//         num1 = NaN;
+//     }
+//     if (num2 === ""){
+//         alert("Введите ваше число");
+//         num2 = NaN;
+//     } 
+
+//     return [num1 , num2]
+// }
+
+function getNums(){
+    const num1 = document.getElementById('firstNumber').value;
+    const num2 = document.getElementById('secondNumber').value;
+
+        if ([num1, num2] === ""){
         alert("Введите ваше число");
-        num1 = NaN;
+        return;
     }
     if (num2 === ""){
         alert("Введите ваше число");
-        num2 = NaN;
-    } 
+        return;
+    }
+    return [num1, num2];
+  }
 
-    return [num1 , num2]
-}
+//   function isParseSuccessful(num) {
+//     return !Number.isNaN(num);
+//   }
+// function isParseSuccessful(num){
+//     If(num === ""){
+//         alert ("Numbers only");}
+//         return;
+//     }
 
 function sum(){
     const [num1 , num2] = getNums();

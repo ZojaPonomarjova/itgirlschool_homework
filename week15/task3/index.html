@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+div{
+    padding: 7%;
+}
+h1{
+    font-size: 45px;
+}
+select{
+    padding: 5px 15px;
+}
+body{
+    background-size: cover;
+}
+    </style>
+</head>
+<body id="body">
+    <div>
+        <label for="background">Выберите тему:</label>
+<select name="background-color" id="background" onchange="colorBackground()">
+    <option class="option" value="none" selected>Белая</option>
+    <option class="option" value="dark">Темная</option>
+    <option class="option" value="light-blue">Голубая</option>
+    <option class="option" value="picture">Бабочки</option>
+</select>
+<h1>Это мой веб-сайт</h1>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
