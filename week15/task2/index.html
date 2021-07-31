@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="main">
+        <div class="main__container">
+            <div class="main__inner">
+                <h2 class="main__title">Создайте аккаунт</h2>
+                <form class="main__form" id="form" onsubmit="return false;">
+                    <div class="form__name">
+                        <input type="text" name="firstName" id="firstName" class="name__firstName name__input"
+                            placeholder="Имя">
+                        <input type="text" name="lastName" id="lastName" class="name__lastName name__input"
+                            placeholder="Фамилия">
+
+                    </div>
+                    <div class="form__input-error-message">
+                        <div id="firstNameInputErrorMessage" class="error-message"></div>
+                        <div id="lastNameInputErrorMessage" class="error-message"></div>
+                    </div>
+                    <div class="form__email">
+                        <input type="email" name="email" id="email" class="form__email-input"
+                            placeholder="Адрес электронной почты">
+                        <div id="emailInputErrorMessage" class="error-message"></div>
+                        <p class="form__text">
+                            Можно использовать буквы латинского алфавита, цифры, точки и специальные символы.
+                        </p>
+                    </div>
+                    <div class="form__password-container">
+                        <div class="form__password">
+                            <input type="password" name="password" id="password" class="form__password-input"
+                                placeholder="Пароль">
+                            <input type="password" name="confirmPassword" id="confirmPassword"
+                                class="form__password-input" placeholder="Подтвердить">
+                        </div>
+                        <div id="passwordInputErrorMessage" class="error-message"></div>
+                        <p class="form__text">
+                            Пароль должен содержать не менее восьми знаков.
+                        </p>
+                        <input type="checkbox" name="showPassword" id="showPassword">
+                        <label for="showPassword" class="form__label">Показать пароль</label>
+                    </div>
+                    <div class="main__button-container">
+                        <button class="form__button" id="enterButton">Войти</button>
+                    </div>
+                </form>
+                <div id="commonErrorMessage" class="error-message"></div>
+            </div>
+            <div class="main__image">
+                <img src="./shield.png" alt="Щит" class="image shield">
+                <img src="./avatar-icon.png" alt="Аватар" class="image icon">
+            </div>
+        </div>
+
+    </main>
+    <footer></footer>
+    <script src="./index.js"></script>
+</body>
+
+</html>
