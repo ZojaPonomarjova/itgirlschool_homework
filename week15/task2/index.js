@@ -65,7 +65,7 @@ let showMessagePasswordError = () => {
         document.getElementById("passwordInputErrorMessage").innerHTML = "Придумайте пароль";
         password.style.borderColor = "red";
     } else if (password.value.length < 8) {
-        document.getElementById("passwordInputErrorMessage").innerHTML = "Пароль должен содержать не менее восьми знаков";
+        document.getElementById("passwordInputErrorMessage").innerHTML = "Пароль содержит менее восьми знаков";
         password.style.borderColor = "red";
     } else if (confirmPassword.value != password.value) {
         document.getElementById("passwordInputErrorMessage").innerHTML = "Пароли не совпадают";
@@ -88,7 +88,7 @@ let showMessageConfirmPasswordError = () => {
         password.style.borderColor = "red";
     } 
     else if (confirmPassword.value.length < 8) {
-        document.getElementById("passwordInputErrorMessage").innerHTML = "Пароль должен содержать не менее восьми знаков";
+        document.getElementById("passwordInputErrorMessage").innerHTML = "Пароль содержит менее восьми знаков";
         confirmPassword.style.borderColor = "red";
     }
     else {
