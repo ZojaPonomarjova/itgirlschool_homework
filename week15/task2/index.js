@@ -86,7 +86,12 @@ let showMessageConfirmPasswordError = () => {
         document.getElementById("passwordInputErrorMessage").innerHTML = "Пароли не совпадают";
         confirmPassword.style.borderColor = "red";
         password.style.borderColor = "red";
-    } else {
+    } 
+    else if (confirmPassword.value.length < 8) {
+        document.getElementById("passwordInputErrorMessage").innerHTML = "Пароль должен содержать не менее восьми знаков";
+        confirmPassword.style.borderColor = "red";
+    }
+    else {
         document.getElementById("passwordInputErrorMessage").innerHTML = "";
         password.style.borderColor = "black";
         confirmPassword.style.borderColor = "black";
