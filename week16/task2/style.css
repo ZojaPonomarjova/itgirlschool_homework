@@ -1,0 +1,79 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.select,
+#mileage {
+    min-width: 300px;
+    width: 31%;
+    height: 45px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 15px;
+}
+
+.main {
+    padding: 50px 10%;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.main__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.main__button-container {
+    display: flex;
+    align-items: center;
+}
+
+.main__button-container p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 25px;
+    color: gray;
+}
+
+.main__result {
+    width: 100%;
+    height: fit-content;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.main__button {
+    width: 150px;
+    height: 45px;
+    border-radius: 7px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    background-color: blue;
+    color: white;
+    border: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+option {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+
+}

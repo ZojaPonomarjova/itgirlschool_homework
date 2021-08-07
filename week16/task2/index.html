@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main class="main">
+        <h1>Оцените свою машину за 1 минуту</h1>
+        <div class="main__container">
+            <select name="carBrand" id="carBrand" class="car-brand select">
+                <option value="" selected disabled hidden>Марка</option>
+                <option value="Acura">Acura</option>
+                <option value="Audi">Audi</option>
+                <option value="BMW">BMW</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Citroen">Citroen</option>
+                <option value="Ferrari">Ferrari</option>
+                <option value="Ford">Ford</option>
+                <option value="Honda">Honda</option>
+                <option value="Jaguar">Jaguar</option>
+                <option value="Volvo">Volvo</option>
+            </select>
+            <select class="car-model select" name="model" disabled>
+                <option value="" selected>Модель</option>
+            </select>
+            <select class="car-year select" name="year" disabled>
+                <option value="" selected>Год выпуска</option>
+            </select>
+            <select class="car-modification select" name="modification" disabled>
+                <option value="" selected>Уровень оснащения</option>
+                <option value="basic">Базовый</option>
+                <option value="medium">Средний</option>
+                <option value="maximal">Максимальный</option>
+            </select>
+            <select class="car-bodywork select" name="bodywork" disabled>
+                <option value="" selected>Тип кузова</option>
+            </select>
+                <input type="number" name="mileage" id="mileage"  class="car-mileage select" placeholder="Пробег, км" disabled>
+            </div>
+            <div  class="main__button-container">
+                <button class="main__button">Оценить</button>
+            <p>Чтобы получить более точную оценку, заполните все поля</p>
+        </div>
+<div class="main__result"></div>
+
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,29 +1,48 @@
 let firstName = document.getElementById("firstName");
 let lastName = document.getElementById("lastName");
-let showMessageFirstNameError = () => {
-    if (firstName.value == "") {
-        document.getElementById("firstNameInputErrorMessage").innerHTML = "Укажите имя";
-        firstName.style.borderColor = "red";
-    } else {
-        document.getElementById("firstNameInputErrorMessage").innerHTML = "";
-        firstName.style.borderColor = "black";
-    }
-}
+// let showMessageFirstNameError = () => {
+//     if (firstName.value == "") {
+//         document.getElementById("firstNameInputErrorMessage").innerHTML = "Укажите имя";
+//         firstName.style.borderColor = "red";
+//     } else {
+//         document.getElementById("firstNameInputErrorMessage").innerHTML = "";
+//         firstName.style.borderColor = "black";
+//     }
+// }
 
-let showMessageLastNameError = () => {
-    if (lastName.value == "") {
-        document.getElementById("lastNameInputErrorMessage").innerHTML = "Укажите фамилию";
-        lastName.style.borderColor = "red";
-    } else {
-        document.getElementById("lastNameInputErrorMessage").innerHTML = "";
-        lastName.style.borderColor = "black";
-    }
-}
+// let showMessageLastNameError = () => {
+//     if (lastName.value == "") {
+//         document.getElementById("lastNameInputErrorMessage").innerHTML = "Укажите фамилию";
+//         lastName.style.borderColor = "red";
+//     } else {
+//         document.getElementById("lastNameInputErrorMessage").innerHTML = "";
+//         lastName.style.borderColor = "black";
+//     }
+// }
+const getNameValidationFunction = (elementId, errorMessage) => {
+    return (e) => {
+      const element = e.target;
+      if (element.value == "") {
+        document.getElementById(elementId).innerHTML = errorMessage;
+        element.style.borderColor = "red";
+      } else {
+        document.getElementById(elementId).innerHTML = "";
+        element.style.borderColor = "black";
+      }
+    };
+  };
 
-firstName.addEventListener("change", showMessageFirstNameError);
-firstName.addEventListener("blur", showMessageFirstNameError);
-lastName.addEventListener("change", showMessageLastNameError);
-lastName.addEventListener("blur", showMessageLastNameError);
+  const firstNameCallback = getNameValidationFunction("firstNameInputErrorMessage", "Укажите имя");
+const lastNameCallback = getNameValidationFunction("lastNameInputErrorMessage", "Укажите фамилию");
+firstName.addEventListener("change", firstNameCallback);
+firstName.addEventListener("blur", firstNameCallback);
+lastName.addEventListener("change", lastNameCallback);
+lastName.addEventListener("blur", lastNameCallback);
+
+// firstName.addEventListener("change", showMessageFirstNameError);
+// firstName.addEventListener("blur", showMessageFirstNameError);
+// lastName.addEventListener("change", showMessageLastNameError);
+// lastName.addEventListener("blur", showMessageLastNameError);
 
 let showMessageEmailError = () => {
     let email = document.getElementById("email");
@@ -104,12 +123,11 @@ confirmPassword.addEventListener("change", showMessageConfirmPasswordError);
 confirmPassword.addEventListener("blur", showMessageConfirmPasswordError);
 
 function formValidation() {
-    let usernName = document.getElementById("firstName").value;
-    let userSurname = document.getElementById("lastName").value;
+
     document.getElementById("commonErrorMessage").innerHTML = "";
 
     if (firstName.value && lastName.value && email.value && password.value && confirmPassword.value != '') {
-        document.getElementById("commonErrorMessage").innerHTML = ""
+        document.getElementById("commonErrorMessage").innerHTML = "";
     } else {
         document.getElementById("commonErrorMessage").innerHTML = "Вы заполнили не все поля!";
     }
@@ -120,8 +138,18 @@ function formValidation() {
     document.getElementById("commonErrorMessage").innerHTML != "") {
         document.getElementById("commonErrorMessage").innerHTML = "Вы заполнили не все поля!";
     } else {
-        alert(`Добро пожаловать, ${usernName} ${userSurname}!`);
+        sayHallo();
     }
 }
 let enterButton = document.getElementById("enterButton");
 enterButton.addEventListener("click", formValidation);
+
+function sayHallo(){
+    let usernName = document.getElementById("firstName").value;
+    let userSurname = document.getElementById("lastName").value;
+    document.getElementById("title").innerHTML = `Добро пожаловать, <br/>${usernName} ${userSurname}!`;
+    // document.getElementById("form").style.display = "none";
+    document.getElementsByClassName("main__inner")[0].style.display = "none";
+    document.getElementsByClassName("shield")[0].style.marginTop = "none";
+
+}
