@@ -3,22 +3,24 @@ function sumInput() {
     let sum = 0;
 
     for (let i = 0;; i++) {
-        numbers[i] = +prompt("Введите число", '');
 
+    numbers[i] = +prompt("Введите число", '');
+
+    if(numbers[i] ==""){
+        numbers.pop();
+    }
         if (!numbers[i]) break;
+
         sum += numbers[i];
     }
 
-    function compareNumbers(a, b) {
-        if (a > b) return 1;
-        if (a == b) return 0;
-        if (a < b) return -1;
-    }
+    numbers.sort( (a, b) => a - b );
 
-    numbers.sort(compareNumbers);
     alert(numbers)
     alert(sum);
 }
 
 sumInput()
+
+
 
