@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+main{
+    max-width: 1200px;
+    margin: auto;
+    background-color: lightyellow;
+    padding: 40px;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    border-radius: 7px;
+}
+.input-name{
+    width: 450px;
+    height: fit-content;
+    min-height: 45px;
+
+    border-radius: 5px;
+}
+.final-text{
+    min-width: 250px;
+
+    height: fit-content;
+    min-height: 35px;
+    margin-bottom: 35px;
+    border-radius: 5px;
+    margin-right: 25px;
+}
+label{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container div{
+    width: 33%;
+}
+input{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    padding-left: 15px;
+}
+.error{
+    width: 100%;
+    height: fit-content;
+    color: red;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+    </style>
+</head>
+<body>
+    <main>
+        <div><label for="input-name">Введите, пожалуйста, Ваши фамилию имя отчество</label>
+        <input type="text" name="input-name" id="input-name" class="input-name"/>
+        <div class="error" id="error
+        "></div>
+        <div class="container">
+            <div><label for="name">Имя:</label>
+            <input type="text" name="name" id="name" class="final-text"/></div>
+            <div><label for="patronymic">Отчество:</label>
+            <input type="text" name="patronymic" id="patronymic" class="final-text"/></div>
+            <div><label for="surname">Фамилия:</label>
+            <input type="text" name="surname" id="surname" class="final-text"/></div>
+        </div>
+    
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>
