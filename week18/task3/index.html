@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <main class="main">
+            <div class="main__header"></div>
+            <div class="main__messages">
+
+            </div>
+            <form class="main__input" onsubmit="return false">
+                <div class="input__textarea">
+                    <textarea name="message" id="textarea" class="textarea"></textarea>
+                </div>
+                <button class="input__button">Send</button>
+                <div class="input-container">
+                    <input class="user-name" type="text" name="user-name" id="user-name" placeholder="Введите свое имя" />
+                    <button class="button-save button-for-name">Сохранить</button><br />
+                    <label for="upload" class="label">Загрузите Ваше фото</label>
+                    <div class="photo-upload-container">
+                        <div class="fileform">
+                            <div id="fileformlabel"></div>
+                            <div class="selectbutton">Выберите файл</div>
+                            <input id="upload" type="file" name="upload" onchange="getName(this.value);" />
+                        </div>
+                        <button class="button-save button-for-photo">Сохранить</button>
+                        <button class="change-user-data">Редактировать</button>
+                    </div>
+                    <div class="error"></div>
+                </div>
+            </form>
+        </main>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
