@@ -2,8 +2,8 @@ let conversation = document.querySelector(".main__messages");
 let finalMessage;
 
 function sendMessage() {
-    let messageChangeToLower = document.querySelector(".textarea").value.toLowerCase();
-    checkSpam(messageChangeToLower);
+    let message = document.querySelector(".textarea").value;
+    checkSpam(message);
 
     if (finalMessage != "") {
         const name = document.createElement("p");
@@ -58,7 +58,7 @@ function sendMessage() {
 }
 
 function checkSpam(str) {
-    if (str.includes('viagra'.toLowerCase()) || str.includes('xxx'.toLowerCase()) || str.includes('ххх'.toLowerCase())) {
+    if (str.toLowerCase().includes('viagra'.toLowerCase()) || str.toLowerCase().includes('xxx'.toLowerCase()) || str.toLowerCase().includes('ххх'.toLowerCase())) {
         changedMessage = str.replace(/viagra|xxx|ххх/gi, "***");
     } else {
         changedMessage = str;
@@ -130,6 +130,7 @@ function rememberUserPhoto() {
 document.querySelector(".button-for-name").addEventListener("click", rememberUserName);
 document.querySelector(".button-for-photo").addEventListener("click", rememberUserPhoto);
 
+document.querySelector(".fileform").addEventListener("click", clickInput= ()=> { document.querySelector("#upload").click(); });
 
 function getName(str) {
     let i;
