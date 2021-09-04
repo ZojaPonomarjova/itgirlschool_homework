@@ -1,0 +1,135 @@
+.container {
+    background-color: rgb(252, 247, 193);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main__button {
+    position: fixed;
+    top: calc(100% - 120px);
+    left: calc(100% - 125px);
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 217, 0, 1);
+
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+.main__button:hover {
+    background-color: rgba(250, 225, 3, 0.938);
+    cursor: pointer;
+}
+
+.subtitle {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 36px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    background: -webkit-linear-gradient(45deg, #8a5eb7, #ff8040, #ffac8c, #ff8080);
+    background: linear-gradient(45deg, #8a5eb7, #ff8040, #ffac8c, #ff8080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main__notes {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: normal;
+
+    height: 65vh;
+    overflow-y: auto;
+}
+
+.enter-note-area {
+    position: fixed;
+    top: calc(100% - 120px);
+    left: 25px;
+    margin: auto;
+
+    height: 85px;
+    width: 85%;
+
+    border: 1px solid #ff8080;
+    /* border-image: linear-gradient(60deg, #8a5eb7, #ff8040, #ffac8c, #ff8080);
+    border-image-slice: 1; */
+    border-radius: 25px;
+    text-align: start;
+    padding: 5px 8px;
+}
+
+.enter-note-area:focus {
+    border-radius: 25px;
+    border: 1px solid #ff8080;
+    outline: none
+}
+
+textarea::placeholder {
+    color: #ffac8c;
+    text-align: center;
+}
+
+@media screen and (max-width: 1068px) {
+    .main__button {
+        top: calc(100% - 115px);
+        left: calc(100% - 95px);
+
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .main__button {
+        top: calc(100% - 115px);
+        left: calc(100% - 80px);
+
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@media screen and (max-width: 798px) {
+    .main__button {
+        top: calc(100% - 75px);
+        left: calc(100% - 105px);
+    }
+
+    .enter-note-area {
+        top: calc(100% - 145px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main__button {
+        left: 72%;
+        top: calc(100% - 65px);
+
+        width: 65px;
+        height: 65px;
+    }
+
+    .enter-note-area {
+        top: calc(100% - 140px);
+        height: 60px;
+    }
+}
+
+p {
+    width: fit-content;
+    padding: 5px 15px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 10px 40px;
+
+    word-wrap: break-word;
+    hyphens: auto;
+    word-break: keep-all;
+}

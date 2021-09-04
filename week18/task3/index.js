@@ -1,5 +1,11 @@
 let conversation = document.querySelector(".main__messages");
 let finalMessage;
+let myMesages = [];
+if (localStorage.getItem("savedMessages") != null) {
+    myMessages = JSON.parse(localStorage.getItem("savedMessages"));
+} else {
+    myMessages = [];
+}
 
 function sendMessage() {
     let message = document.querySelector(".textarea").value;
@@ -28,6 +34,11 @@ function sendMessage() {
             photoContainer.style.backgroundImage = `url(./images/avatar-icon.png)`;
         }
         newText.innerText = finalMessage;
+
+        myMessages.push(finalMessage);
+        localStorage.setItem("savedMessages", JSON.stringify(myMessages));
+        console.log(localStorage);
+
         textConteiner.style.cssText = `border-bottom: 1px solid #e2dfde;
         height: 50px;
         display: flex;
@@ -91,7 +102,7 @@ function rememberUserName() {
     }
 
     document.querySelector("#user-name").value = "";
-        document.querySelector("#user-name").placeholder = "";
+    document.querySelector("#user-name").placeholder = "";
 }
 
 
@@ -104,21 +115,21 @@ function rememberUserPhoto() {
         return;
     }
 
-    if (inputPhoto != undefined && localStorage.getItem("photoUrl") === null)
-    {   document.querySelector(".error").innerHTML = "";
+    if (inputPhoto != undefined && localStorage.getItem("photoUrl") === null) {
+        document.querySelector(".error").innerHTML = "";
         reader.onloadend = function () {
-        localStorage.setItem("photoUrl", `${reader.result}`);
-        document.querySelector("#upload").setAttribute('disabled', 'disabled');
-        document.querySelector(".fileform").style.cssText = `border: 1.5px solid lightgrey;
+            localStorage.setItem("photoUrl", `${reader.result}`);
+            document.querySelector("#upload").setAttribute('disabled', 'disabled');
+            document.querySelector(".fileform").style.cssText = `border: 1.5px solid lightgrey;
         background-color: #fafafa;`;
-        document.querySelector("#fileformlabel").style.backgroundColor = "#fafafa";
-        document.querySelector(".selectbutton").style.cssText = `border: 1.5px solid lightgrey;
+            document.querySelector("#fileformlabel").style.backgroundColor = "#fafafa";
+            document.querySelector(".selectbutton").style.cssText = `border: 1.5px solid lightgrey;
         background-color: lightgrey;`;
-    }
-    if (inputPhoto) {
-        reader.readAsDataURL(inputPhoto);
-
-    }}else{
+        }
+        if (inputPhoto) {
+            reader.readAsDataURL(inputPhoto);
+        }
+    } else {
         document.querySelector(".error").innerHTML = "Вы уже загрузили фото";
         return;
     }
@@ -126,11 +137,12 @@ function rememberUserPhoto() {
     document.getElementById("fileformlabel").innerHTML = "";
 }
 
-
 document.querySelector(".button-for-name").addEventListener("click", rememberUserName);
 document.querySelector(".button-for-photo").addEventListener("click", rememberUserPhoto);
 
-document.querySelector(".fileform").addEventListener("click", clickInput= ()=> { document.querySelector("#upload").click(); });
+document.querySelector(".fileform").addEventListener("click", clickInput = () => {
+    document.querySelector("#upload").click();
+});
 
 function getName(str) {
     let i;
@@ -144,40 +156,92 @@ function getName(str) {
     uploaded.innerHTML = filename;
 }
 
-function checkStorage(){
-    if(localStorage.getItem("photoUrl") != null){
+function checkStorage() {
+    if (localStorage.getItem("photoUrl") != null) {
         document.querySelector("#upload").setAttribute('disabled', 'disabled');
     }
-    if(localStorage.getItem("name") != null){
+    if (localStorage.getItem("name") != null) {
         document.querySelector("#user-name").setAttribute('disabled', 'disabled');
         document.querySelector("#user-name").placeholder = "";
     }
-    if(document.querySelector("#upload").disabled === true){
+    if (document.querySelector("#upload").disabled === true) {
         document.querySelector(".fileform").style.cssText = `border: 1.5px solid lightgrey;
         background-color: #fafafa;`;
         document.querySelector("#fileformlabel").style.backgroundColor = "#fafafa";
         document.querySelector(".selectbutton").style.cssText = `border: 1.5px solid lightgrey;
         background-color: lightgrey;`;
     }
+
+    if (localStorage.getItem("savedMessages") != null) {
+        let messagesFromStorage = JSON.parse(localStorage.getItem("savedMessages"));
+
+        // console.log(messagesFromStorage);
+        for (let i = 0; i < messagesFromStorage.length; i++) {
+
+            const name = document.createElement("p");
+            const newText = document.createElement("p");
+            const textPlusNameConteiner = document.createElement("div");
+            const textConteiner = document.createElement("div");
+            const photoContainer = document.createElement("div");
+            let photoUrl = localStorage.getItem("photoUrl");
+
+            photoContainer.style.cssText = `min-width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-right: 15px;
+    `;
+
+            if (localStorage.getItem("photoUrl") != null) {
+                photoContainer.style.backgroundImage = `url(${photoUrl})`;
+            } else {
+                photoContainer.style.backgroundImage = `url(./images/avatar-icon.png)`;
+            }
+
+            textConteiner.style.cssText = `border-bottom: 1px solid #e2dfde;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;`;
+
+            if (localStorage.getItem("name") != null) {
+                name.innerText = localStorage.getItem("name");
+            } else {
+                name.innerText = "аноним";
+            }
+            name.style.cssText = `font-weight: 600;
+    margin-bottom: 10px;
+    color: grey;
+    `;
+            newText.innerText = messagesFromStorage[i];
+            conversation.appendChild(textConteiner);
+            textConteiner.appendChild(photoContainer);
+            textConteiner.appendChild(textPlusNameConteiner);
+            textPlusNameConteiner.appendChild(name);
+            textPlusNameConteiner.appendChild(newText);
+        }
+        conversation.scrollTop = conversation.scrollHeight;
+    }
 }
 document.addEventListener("DOMContentLoaded", checkStorage);
 
-function changeUserData(){
+function changeUserData() {
     document.querySelector(".error").innerHTML = "";
     document.querySelector("#upload").removeAttribute('disabled');
     document.querySelector("#user-name").removeAttribute('disabled');
     document.querySelector("#user-name").placeholder = "Введите свое имя";
 
 
-        document.querySelector(".fileform").style.cssText = `border: 1.5px solid #82bef3;
+    document.querySelector(".fileform").style.cssText = `border: 1.5px solid #82bef3;
         background-color: #FFF;`;
-        document.querySelector("#fileformlabel").style.backgroundColor = "#FFF";
-        document.querySelector(".selectbutton").style.cssText = `border: 1.5px solid #82bef3;
+    document.querySelector("#fileformlabel").style.backgroundColor = "#FFF";
+    document.querySelector(".selectbutton").style.cssText = `border: 1.5px solid #82bef3;
         background-color: #82bef3;`;
-        document.querySelector("#user-name").value = localStorage.getItem("name");
+    document.querySelector("#user-name").value = localStorage.getItem("name");
 
-        localStorage.removeItem("name");
-        localStorage.removeItem("photoUrl");
+    localStorage.removeItem("name");
+    localStorage.removeItem("photoUrl");
 }
 document.querySelector(".change-user-data").addEventListener("click", changeUserData)
-
