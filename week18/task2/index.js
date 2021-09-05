@@ -23,7 +23,7 @@ lastName.addEventListener("blur", lastNameCallback);
 
 let showMessageEmailError = () => {
     let email = document.getElementById("email");
-    let emailRegexp = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
+    let emailRegexp = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
 
     if (email.value == "") {
         document.getElementById("emailInputErrorMessage").innerHTML = "Укажите e-mail";
@@ -57,7 +57,7 @@ let showPassword = () => {
 viewPassword.addEventListener("change", showPassword);
 
 let showMessagePasswordError = () => {
-    const passwordRegexp = /^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$/;
+    const passwordRegexp = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}/g;
     if (password.value == "") {
         document.getElementById("passwordInputErrorMessage").innerHTML = "Придумайте пароль";
         password.style.borderColor = "red";
@@ -80,7 +80,7 @@ let showMessagePasswordError = () => {
 }
 
 let showMessageConfirmPasswordError = () => {
-    const passwordRegexp = /^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$/;
+    const passwordRegexp = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}/g;
     if (confirmPassword.value == "") {
         document.getElementById("passwordInputErrorMessage").innerHTML = "Подтвердите пароль";
         confirmPassword.style.borderColor = "red";
