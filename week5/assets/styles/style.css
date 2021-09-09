@@ -1,5 +1,5 @@
 a:hover {
-    color: blue
+    color: #01996D;
 }
 
 li:nth-child(n) {
@@ -15,6 +15,7 @@ a:nth-child(n) {
 .button {
     color: white;
     background-color: #01996D;
+    border: none;
 
     border-radius: 10px;
 

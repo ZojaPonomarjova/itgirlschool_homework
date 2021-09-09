@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Document</title>
+    <style>
+        input:required:invalid {
+            border: 2px solid red;
+            box-shadow: 0px 0px 8px 1px rgba(255, 18, 18, 0.3);
+            background-image: linear-gradient(to right, rgb(248, 228, 231), rgb(227, 235, 189));
+        }
+
+        input:valid {
+            border: 2px solid rgb(22, 197, 22);
+
+            box-shadow: 0px 0px 4px 1px rgba(12, 235, 12, 0.3);
+            background-color: rgba(144, 238, 144, 0.1);
+        }
+
+        p {
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <label for="">Адрес электронной почты *
+            <input type="email" name="email" id="email" placeholder="username@example.com" required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></label>
+        <button>+</button>
+        <p>Адрес должен соответствовать формату: username@example.com. <br />Можно использовать буквы латинского
+            алфавита, цифры, точки и специальные символы.</p>
+    </form>
+</body>
+<script src="./index.js"></script>
+</html>

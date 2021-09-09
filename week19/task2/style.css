@@ -1,0 +1,26 @@
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+span {
+    font-style: italic;
+}
+
+legend {
+    font-weight: bold;
+}
+
+input:required:valid {
+    border-color: lightgreen;
+}
+
+input:required:invalid {
+    border-color: coral;
+    background-image: linear-gradient(to right, rgb(248, 228, 231), rgb(189, 235, 189));
+}
+
+select:required:invalid {
+    border-color: coral;
+    background-image: linear-gradient(to right, rgb(248, 228, 231), rgb(189, 235, 189));
+}
