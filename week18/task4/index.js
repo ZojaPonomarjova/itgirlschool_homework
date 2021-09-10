@@ -55,7 +55,7 @@ function checkStorage(){
         }
         notes.scrollTop = notes.scrollHeight;
     }
-    alert(localStorage.getItem("name"));
+    // alert(localStorage.getItem("name"));
 }
 
 document.addEventListener("DOMContentLoaded", checkStorage);
