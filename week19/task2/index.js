@@ -22,6 +22,7 @@ function showPetData() {
 
     function checkChosenSex() {
         let theGroup = document.querySelectorAll("input[name='sex']");
+        let i;
         for (i = 0; i < theGroup.length; i++) {
             if (theGroup[i].checked) {
                 break;
