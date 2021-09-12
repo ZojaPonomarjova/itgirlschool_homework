@@ -22,7 +22,7 @@ function showPetData() {
 
     function checkChosenSex() {
         let theGroup = document.querySelectorAll("input[name='sex']");
-        for (i = 0; i < theGroup.length; i++) {
+        for (let i = 0; i < theGroup.length; i++) {
             if (theGroup[i].checked) {
                 break;
             }
