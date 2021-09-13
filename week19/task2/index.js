@@ -1,5 +1,5 @@
 class Cat {
-    constructor(catName, ownerName, ownerSurname, ownerPatronymic, phoneNumber, breed, sex) {
+    constructor(catName, ownerName, ownerSurname, ownerPatronymic, phoneNumber, breed, sex, city, street, house, apartment) {
         this.catName = catName;
         this.ownerName = ownerName;
         this.ownerSurname = ownerSurname;
@@ -7,6 +7,10 @@ class Cat {
         this.phoneNumber = phoneNumber;
         this.breed = breed;
         this.sex = sex;
+        this.city = city;
+        this.street = street;
+        this.house = house;
+        this.apartment = apartment;
     }
 }
 
@@ -19,6 +23,10 @@ function showPetData() {
     let ownerPatronymic = document.querySelector("#ownerPatronymic").value;
     let phoneNumber = Number(document.querySelector("input[name = 'phone1']").value + document.querySelector("input[name = 'phone2']").value + document.querySelector("input[name = 'phone3']").value);
     let breed = document.querySelector("#breed").value;
+    let city = document.querySelector("#city").value;
+    let street = document.querySelector("#street").value;
+    let house = document.querySelector("#house").value;
+    let apartment = document.querySelector("#apartment").value;
 
     function checkChosenSex() {
         let theGroup = document.querySelectorAll("input[name='sex']");
@@ -31,24 +39,7 @@ function showPetData() {
         return theGroup[i].value;
     }
     let chosenSex = checkChosenSex();
-    let userCat = new Cat(catName, ownerName, ownerSurname, ownerPatronymic, phoneNumber, breed, chosenSex);
-    let city = document.querySelector("#city").value;
-    let street = document.querySelector("#street").value;
-    let house = document.querySelector("#house").value;
-    let apartment = document.querySelector("#apartment").value;
-
-    if (city != "") {
-        userCat.city = city;
-    }
-    if (street != "") {
-        userCat.street = street;
-    }
-    if (house != "") {
-        userCat.house = house;
-    }
-    if (apartment != "") {
-        userCat.apartment = apartment;
-    }
+    let userCat = new Cat(catName, ownerName, ownerSurname, ownerPatronymic, phoneNumber, breed, chosenSex, city, street, house, apartment);
 
     function checkChosenMeal() {
         let theGroup = document.querySelectorAll("input[name='meal']");
@@ -60,7 +51,8 @@ function showPetData() {
         }
         return meal.join(", ");
     }
-    userCat.meal = checkChosenMeal();
+    if(checkChosenMeal()){
+    userCat.meal = checkChosenMeal();}
 
     console.log(userCat);
 }
