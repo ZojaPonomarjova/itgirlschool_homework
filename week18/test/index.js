@@ -58,21 +58,75 @@
 // ;
 // console.log(nameRegexp.test("фон Иванов Семен Кузьмич"));
 
-class Person{
-    constructor(name){
-        this.name = name
-    }
-}
-const member = new Person("John");
-console.log(typeof member);
-console.log(member);
-const person1 = {
-    name: "Valera",
-    age: 23
-}
-person1.city = "Amsterdam";
-// let city = person1.city;
-// city = "Amsterdam";
-console.log(person1);
+// class Person{
+//     constructor(name){
+//         this.name = name
+//     }
+// }
+// const member = new Person("John");
+// console.log(typeof member);
+// console.log(member);
+// const person = {
+//     name: "Valera",
+//     age: 23
+// }
+
+// let city = person.city;
+// // city = "Amsterdam";
+// console.log(person);
+// console.log(city);// undefined
+// person.city = "Amsterdam";
+// // city = person.city;
 // console.log(city);
+
+// class Car {
+//     constructor() {
+//         this.speed = 0;
+//     }
+
+//     get drive() {
+//         if (this.speed === 0) {
+//               console.log("Скорость ноль! Машина не поедет!");
+//         } else {
+//               console.log("Мы едем со скоростью"); 
+//         }
+//         return this.speed;
+//     }
+
+//     set drive(speed) {
+//         if (speed < 0) {
+//                console.log("Машины с отрицательной скоростью не ездят!");
+//                return;
+//         }
+//         this.speed = speed;
+//     }
+// }
+
+// const lada = new Car();
+// console.log(lada.drive); // Скорость ноль! Машина не поедет! 0
+// lada.drive = -25; // Машины с отрицательной скоростью не ездят!
+// console.log(lada.drive); // Скорость ноль! Машина не поедет! 0
+// lada.drive = 35;//
+// console.log(lada.drive); // Мы едем со скоростью 35
+
+// let date = new Date( Date.parse('2012-01-26T13:51:50.417-07:00') );
+
+// alert(date);
+let sunriseTime = new Date(1631847910*1000);
+let hours = sunriseTime.getHours();
+let minutes = sunriseTime.getMinutes();
+console.log( hours +":" + minutes);
+
+
+// multiplied by 1000 so that the argument is in milliseconds, not seconds.
+// var date = new Date(1631847910*1000);
+
+// var hours = date.getHours();
+// var minutes = "0" + date.getMinutes();
+// var seconds = "0" + date.getSeconds();
+
+// // Will display time in 04:30:23 format
+// var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+    
+// console.log(formattedTime);
 

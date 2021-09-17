@@ -1,0 +1,109 @@
+.main__title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 45px;
+    text-align: center;
+
+    margin-top: 40px;
+}
+
+.main__subtitle {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    text-align: center;
+
+    margin-top: 20px;
+}
+
+.body {
+    width: 100%;
+    height: 100vh;
+    /* min-height: fit-content; */
+    background-image: linear-gradient(165deg, #ff7f50, #480ca7);
+    flex-direction: column;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 auto;
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.main__weather-container {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 auto;
+
+    font-size: 40px;
+}
+
+.little-picture {
+    width: auto;
+    height: 50px;
+}
+
+.middle-picture {
+    width: 150px;
+    height: auto;
+    min-height: 100px;
+}
+
+.weather-container__degrees {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 135px;
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+.weather-container__celsius-degrees {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+.main__button {
+    width: 350px;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    margin-top: 20px;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.weather-container__sun-info {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.weather-container__pressure-info,
+.weather-container__sun-info,
+.weather-container__wind-info {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.main__input {
+    width: 350px;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 7px;
+    border: none;
+
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
