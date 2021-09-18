@@ -102,9 +102,9 @@ function showFullInformation(event) {
         for (let i = 0; i < cardsInner.length; i++) {
             let cardInnerText = "";
 
-                        if (cardsInner[i].id === parentID) {
-                targetParent.style.cssText = `width: 92%;
-                max-width: 92%;`;
+            if (cardsInner[i].id === parentID) {
+                targetParent.style.cssText = `width: 93%;
+                max-width: 93%;`;
 
                 cardInnerText += `<div class="card__background"></div>
                 <h2 class="card__title">${cardsInner[i].name}</h2>
@@ -115,11 +115,70 @@ function showFullInformation(event) {
         <p class="card__paragraph"><span class="card__subtitle">Друзья: </span><span class="card__text">${cardsInner[i].friends}</span></p>
         <p class="card__paragraph"><span class="card__subtitle">Суперсилы: </span><span class="card__text">${cardsInner[i].superPower}</span></p>
         <p class="card__paragraph"><span class="card__subtitle">Подробнее: </span><p class="card__text">${cardsInner[i].details}</p></p>
+        <div class="rating">
+        <div class="rating__items">
+            <input type="radio" name="rating" id="rating__5" class="rating__item" value="5"/>
+            <label for="rating__5" class="rating__label"></label>
+            <input type="radio" name="rating" id="rating__4" class="rating__item" value="4"/>
+            <label for="rating__4" class="rating__label"></label>
+            <input type="radio" name="rating" id="rating__3" class="rating__item" value="3"/>
+            <label for="rating__3" class="rating__label"></label>
+            <input type="radio" name="rating" id="rating__2" class="rating__item" value="2"/>
+            <label for="rating__2" class="rating__label"></label>
+            <input type="radio" name="rating" id="rating__1" class="rating__item" value="1"/>
+            <label for="rating__1" class="rating__label"></label>
+        </div>
+    </div>
         `
                 targetParent.innerHTML = cardInnerText;
                 document.querySelectorAll(".card__background")[i].style.backgroundImage = `none`;
                 document.querySelectorAll(".card__background")[i].style.minHeight = `0px`;
-                
+
+
+                function getRating() {
+                    for (let index = 0; index < 5; index++) {
+                        if (document.querySelectorAll(".rating__item")[index].checked) {
+                            console.log(document.querySelectorAll(".rating__item")[index].value);
+                            let rateForStorage;
+
+                            switch (document.querySelectorAll(".rating__item")[index].value) {
+                                case "5":
+                                    rateForStorage = 1;
+                                    break;
+                                    case "4":
+                                    rateForStorage = 2;
+                                    break;
+                                    case "3":
+                                    rateForStorage = 3;
+                                    break;
+                                    case "2":
+                                    rateForStorage = 4;
+                                    break;
+                                    case "1":
+                                    rateForStorage = 5;
+                                    break;
+                            }
+                            document.querySelectorAll(".rating__item")[index].value
+                            if (localStorage.getItem(cardsInner[i].name) != cardsInner[i].name) {
+                                localStorage.setItem(cardsInner[i].name, cardsInner[i].name);
+                                localStorage.setItem(`${cardsInner[i].name} rate`, rateForStorage);
+
+                                console.log(localStorage);
+                            }
+                            if (localStorage.getItem(cardsInner[i].name) === cardsInner[i].name) {
+                                localStorage.setItem(`${cardsInner[i].name} rate`, rateForStorage);
+                            }
+                        } else {
+                            continue;
+                        }
+
+                    }
+                }
+                document.querySelector(".rating__items").addEventListener("click", getRating);
+
+                if (localStorage.length != 0 && cardsInner[i].name === localStorage.getItem(cardsInner[i].name)) {
+                    document.querySelectorAll(".rating__item")[localStorage.getItem(`${cardsInner[i].name} rate`) - 1].setAttribute('checked', 'checked');
+                }
             }
 
             if (cardsInner[i].id != parentID) {
@@ -137,15 +196,12 @@ function showFullInformation(event) {
                 document.querySelectorAll(".main__card")[i].innerHTML = cardInnerText;
                 document.querySelectorAll(".main__card")[i].style.cssText = `width: 41%;
                 max-width: 41%;`
-                console.log(document.querySelectorAll(".card__background")[i]);
                 document.querySelectorAll(".card__background")[i].style.backgroundImage = `URL(${cardsInner[i].photoSrc})`;
             }
         }
     }
 
-        }
-
-    document.querySelector(".main__container").addEventListener("click", showFullInformation)
+}
 
 
-
+document.querySelector(".main__container").addEventListener("click", showFullInformation)
