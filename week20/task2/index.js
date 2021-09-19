@@ -13,9 +13,9 @@ if (city){
 })
 
 
-async function getWeatherData(city){
+function getWeatherData(city){
 
-    await fetch("https://api.weatherbit.io/v2.0/current?lat=35.7796&lon=-78.6382&city={" + city + "}&tz=[local]&key=918f35a0040f4384874ef8f0c0a33725")
+fetch("https://api.weatherbit.io/v2.0/current?lat=35.7796&lon=-78.6382&city={" + city + "}&tz=[local]&key=918f35a0040f4384874ef8f0c0a33725")
 .then(response => response.json())
 .then(weather => {console.log(weather);
     document.querySelector(".main__weather-container").innerHTML = `<div class="weather-container__temperature">
@@ -68,13 +68,8 @@ if(weather.data[0].weather.code >= 200 && weather.data[0].weather.code<=522){
 }else {
     document.querySelector(".middle-picture").src = "./assets/images/white_clouds.png";
 }
-})
-.catch(error =>{console.log(error);
-document.querySelector(".main__weather-container").innerHTML = "";
-document.querySelector(".main__weather-container").innerHTML = "УПС! Что-то пошло не так.";});
 let cityName = document.querySelector(".main__subtitle").innerHTML;
-
-await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=metric&appid=10216f86ee3575bb463e6ca39c789876")
+fetch("https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=metric&appid=10216f86ee3575bb463e6ca39c789876")
 .then(response => response.json())
 .then(weather => {console.log(weather);
     console.log(weather.weather[0].main);
@@ -102,5 +97,10 @@ if(sunsetminutes < 10){
 })
 .catch(error =>{console.log(error);
 });
+})
+.catch(error =>{console.log(error);
+document.querySelector(".main__weather-container").innerHTML = "";
+document.querySelector(".main__weather-container").innerHTML = "УПС! Что-то пошло не так.";});
+
 
 }
