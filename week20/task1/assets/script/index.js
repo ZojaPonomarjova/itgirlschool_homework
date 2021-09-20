@@ -158,7 +158,7 @@ function showFullInformation(event) {
                                     rateForStorage = 5;
                                     break;
                             }
-                            document.querySelectorAll(".rating__item")[index].value
+                            // document.querySelectorAll(".rating__item")[index].value
                             if (localStorage.getItem(cardsInner[i].name) != cardsInner[i].name) {
                                 localStorage.setItem(cardsInner[i].name, cardsInner[i].name);
                                 localStorage.setItem(`${cardsInner[i].name} rate`, rateForStorage);
