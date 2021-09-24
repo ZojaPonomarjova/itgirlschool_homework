@@ -123,9 +123,9 @@ function formValidation() {
         document.getElementById("commonErrorMessage").innerHTML != "") {
         document.getElementById("commonErrorMessage").innerHTML = "Вы заполнили не все поля!";
     } else {
-        sayHallo();
+
         let formSending = () =>{
-            // event.preventDefault();
+
             let user = {
                 firstName: document.getElementById("firstName").value,
                 lastName: document.getElementById("lastName").value,
@@ -146,8 +146,10 @@ function formValidation() {
                 console.log(user);
             })
             .catch(error => console.log(error));
+
         }
         formSending();
+        sayHallo();
     }
 }
 let enterButton = document.getElementById("enterButton");
@@ -164,5 +166,3 @@ function sayHallo() {
 }
 
 
-
-// enterButton.addEventListener("click", formSending);

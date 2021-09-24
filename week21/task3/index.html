@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
     <title>Document</title>
 </head>
 
@@ -15,21 +16,21 @@
     </header>
     <main class="main">
         <h1>Информация о вашем питомце</h1>
-        <form>
+        <form method="POST" action="/post" id="form">
             <div>
                 <label for="name"><strong>Кличка питомца</strong>
-                <input type="text" id="name" required/>*</label></div>
+                <input type="text" name="catName" id="name" required/>*</label></div>
             <fieldset>
                 <legend>ФИО владельца</legend>
                 <div>
                     <label for="name1" >Фамилия
-                    <input type="text" id="name1" required/>*</label></div>
+                    <input type="text" id="name1" name="ownerLastName" required/>*</label></div>
                 <div>
                     <label for="name2">Имя
-                    <input type="text" id="name2" required/>*</label></div>
+                    <input type="text" id="name2" name="ownerFirstName" required/>*</label></div>
                 <div>
                     <label for="name3">Отчество
-                    <input type="text" id="name3" required/>*</label></div>
+                    <input type="text" id="name3" name="ownerPatronymic" required/>*</label></div>
             </fieldset>
             <fieldset>
                 <legend>Контактные данные</legend>
@@ -45,16 +46,16 @@
                 </div>
                 <div>
                     <label for="city">Город
-                    <input type="text" id="city" required/>*</label></div>
+                    <input type="text" id="city" name="city" required/>*</label></div>
                 <div>
                     <label for="street">Улица
-                    <input type="text" id="street" required/>*</label></div>
+                    <input type="text" id="street" name="street" required/>*</label></div>
                 <div>
                     <label for="house">Дом
-                    <input type="text" id="house" required/>*</label></div>
+                    <input type="text" id="house" name="house" required/>*</label></div>
                 <div>
                     <label for="apartment">Квартира
-                    <input type="text" id="apartment" required/>*</label></div>
+                    <input type="text" id="apartment" name="apartment" required/>*</label></div>
             </fieldset>
             <div>
                 <label for="breed"><strong>Порода</strong><br>
@@ -187,9 +188,11 @@
                 <label for="photo"><strong>Прикрепите фотографию вашего питомца</strong></label><br>
                 <input type="file" id="photo" />
             </div><br>
-            <div><button>Сохранить</button></div>
+
         </form>
+        <div><button  id="form-button">Сохранить</button></div>
     </main>
+
     <footer>
 
     </footer>
