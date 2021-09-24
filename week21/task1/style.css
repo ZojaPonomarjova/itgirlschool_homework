@@ -53,7 +53,7 @@
   background-color: #a1a0a0;
 }
 
-.main-container {
+.main__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
