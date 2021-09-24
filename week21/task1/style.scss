@@ -1,0 +1,102 @@
+$default-font:'Franklin Gothic Medium',
+'Arial Narrow',
+Arial,
+sans-serif;
+
+$text-color:rgb(99, 99, 99);
+
+$text-focus: rgb(161, 160, 160);
+
+.main__title {
+    font-size: 45px;
+    font-family: $default-font;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 45px;
+    color: $text-color;
+}
+
+.main__input-container {
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main__input {
+    width: 300px;
+    height: 40px;
+    margin-right: 10px;
+    font-family: $default-font;
+
+    &:focus {
+        background-color: aliceblue;
+        color: $text-focus;
+    }
+}
+
+.main__button {
+    width: 100px;
+    height: 45px;
+    color: white;
+
+    font-family: $default-font;
+    font-size: 20px;
+    background-color: $text-color;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $text-focus;
+    }
+
+    &:active {
+        color: $text-color;
+        background-color: $text-focus;
+    }
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+
+    margin-top: 25px;
+    height: fit-content;
+
+    font-family: $default-font;
+    font-size: 18px;
+    color: $text-focus;
+    text-align: center;
+
+}
+
+.main__little-container {
+    height: 300px;
+    width: auto;
+    margin: 10px;
+}
+
+.main__link {
+    font-family: $default-font;
+    font-size: 18px;
+    color: $text-color;
+    text-decoration: none;
+    margin-bottom: 25px;
+
+    &:hover {
+        color: $text-focus;
+    }
+
+    &:visited {
+        color: $text-focus;
+    }
+}
+
+.main__img {
+    width: auto;
+    height: 90%;
+}

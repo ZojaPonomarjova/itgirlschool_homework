@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main class="main">
+        <h1>Информация о вашем питомце</h1>
+        <form>
+            <div>
+                <label for="name"><strong>Кличка питомца</strong>
+                <input type="text" id="name" required/>*</label></div>
+            <fieldset>
+                <legend>ФИО владельца</legend>
+                <div>
+                    <label for="name1" >Фамилия
+                    <input type="text" id="name1" required/>*</label></div>
+                <div>
+                    <label for="name2">Имя
+                    <input type="text" id="name2" required/>*</label></div>
+                <div>
+                    <label for="name3">Отчество
+                    <input type="text" id="name3" required/>*</label></div>
+            </fieldset>
+            <fieldset>
+                <legend>Контактные данные</legend>
+                <div>
+                    <label for="phone"><strong>Номер телефона</strong><br/>Введите номер телефона в формате (123)456-7890<br/>
+                    (<input type="tel" id="phone1" name = "phone1" required pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2" minlength="3" maxlength="3"/>)
+                    <input type="tel" id="phone2" name = "phone2" required pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2" minlength="3" maxlength="3"/>
+                    <input type="tel" id="phone3" name = "phone3" required pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" size="3" minlength="4" maxlength="4"/>
+                *</label><br>
+                </div>
+                <div>
+                    <p><strong>Адрес</strong></p>
+                </div>
+                <div>
+                    <label for="city">Город
+                    <input type="text" id="city" required/>*</label></div>
+                <div>
+                    <label for="street">Улица
+                    <input type="text" id="street" required/>*</label></div>
+                <div>
+                    <label for="house">Дом
+                    <input type="text" id="house" required/>*</label></div>
+                <div>
+                    <label for="apartment">Квартира
+                    <input type="text" id="apartment" required/>*</label></div>
+            </fieldset>
+            <div>
+                <label for="breed"><strong>Порода</strong><br>
+                <select name="breed" id="breed" required>
+                    <option value="" selected disabled hidden>Выберите породу</option>
+                    <option value="Abyssinian">Abyssinian</option>
+                    <option value="AmericanBobtailSH">American Bobtail SH</option>
+                    <option value="AmericanBobtailLH">American Bobtail LH</option>
+                    <option value="AmericanCurlSH">American Curl SH</option>
+                    <option value="AmericanCurlLH">American Curl LH</option>
+                    <option value="AmericanShorthair">American Shorthair</option>
+                    <option value="AmericanWirehair">American Wirehair</option>
+                    <option value="Anatoli">Anatoli</option>
+                    <option value="Aphrodite'sGiantSH">Aphrodite's Giant SH</option>
+                    <option value="Aphrodite'sGiantLH">Aphrodite's Giant LH</option>
+                    <option value="ArabianMau">Arabian Mau</option>
+                    <option value="Asian">Asian</option>
+                    <option value="AustralianMist">Australian Mist</option>
+                    <option value="Balinese">Balinese</option>
+                    <option value="Bengal">Bengal</option>
+                    <option value="Bombay">Bombay</option>
+                    <option value="BrazilianShorthair">Brazilian Shorthair</option>
+                    <option value="BritishShorthair">British Shorthair</option>
+                    <option value="BritishLonghair">British Longhair</option>
+                    <option value="Burmese">Burmese</option>
+                    <option value="Burmilla">Burmilla</option>
+                    <option value="BurmillaLH">Burmilla LH</option>
+                    <option value="CelticShorthair">Celtic Shorthair</option>
+                    <option value="Ceylon">Ceylon</option>
+                    <option value="Chartreux">Chartreux</option>
+                    <option value="Chausie">Chausie</option>
+                    <option value="ChineseLiHau">Chinese Li Hau</option>
+                    <option value="Classicat">Classicat</option>
+                    <option value="Colourpoint">Colourpoint</option>
+                    <option value="ColourpointShorthair">Colourpoint Shorthair</option>
+                    <option value="CornishRex">Cornish Rex</option>
+                    <option value="Cymric">Cymric</option>
+                    <option value="DevonRex">Devon Rex</option>
+                    <option value="DeutschLanghaar">Deutsch Langhaar</option>
+                    <option value="DonSphynx">Don Sphynx</option>
+                    <option value="EgyptianMau">Egyptian Mau</option>
+                    <option value="ExoticShorthair">Exotic Shorthair</option>
+                    <option value="ForeignWhiteSH">Foreign White SH</option>
+                    <option value="ForeignWhiteLH">Foreign White LH</option>
+                    <option value="GermanRex">German Rex</option>
+                    <option value="Householdpet">Household pet</option>
+                    <option value="Havana">Havana</option>
+                    <option value="HighlandFold">Highland Fold</option>
+                    <option value="HighlandStraight">Highland Straight</option>
+                    <option value="HighlanderSH">Highlander SH</option>
+                    <option value="HighlanderLH">Highlander LH</option>
+                    <option value="JapaneseBobtail SH">Japanese Bobtail SH</option>
+                    <option value="JapaneseBobtail LH">Japanese Bobtail LH</option>
+                    <option value="Kanaani">Kanaani</option>
+                    <option value="KarelianBobtail SH">Karelian Bobtail SH</option>
+                    <option value="KarelianBobtail LH">Karelian Bobtail LH</option>
+                    <option value="Korat">Korat</option>
+                    <option value="KurilianBobtailSH">Kurilian Bobtail SH</option>
+                    <option value="KurilianBobtailLH">Kurilian Bobtail LH</option>
+                    <option value="LaPermSH">LaPerm SH</option>
+                    <option value="LaPermLH">LaPerm LH</option>
+                    <option value="Lykoy">Lykoy</option>
+                    <option value="MaineCoon">Maine Coon</option>
+                    <option value="Mandalay">Mandalay</option>
+                    <option value="Manx">Manx</option>
+                    <option value="MekongBobtail">Mekong Bobtail</option>
+                    <option value="Minskin">Minskin</option>
+                    <option value="MunchkinSH">Munchkin SH</option>
+                    <option value="MunchkinLH">Munchkin LH</option>
+                    <option value="Nebelung">Nebelung</option>
+                    <option value="NevaMasquerade">Neva Masquerade</option>
+                    <option value="NorwegianForest">Norwegian Forest</option>
+                    <option value="Ocicat">Ocicat</option>
+                    <option value="OjosAzulesSH">Ojos Azules SH</option>
+                    <option value="OjosAzulesLH">Ojos Azules LH</option>
+                    <option value="Oriental(Semi-)Longhair">Oriental (Semi-) Longhair</option>
+                    <option value="OrientalShorthair">Oriental Shorthair</option>
+                    <option value="OriginalLonghair">Original Longhair</option>
+                    <option value="Persian">Persian</option>
+                    <option value="Peterbald">Peterbald</option>
+                    <option value="PixiebobSH">Pixiebob SH</option>
+                    <option value="PixiebobLH">Pixiebob LH</option>
+                    <option value="Ragamuffin">Ragamuffin</option>
+                    <option value="Ragdoll">Ragdoll</option>
+                    <option value="Russian">Russian</option>
+                    <option value="RussianBlue">Russian Blue</option>
+                    <option value="SacredBirman">Sacred Birman</option>
+                    <option value="Savannah">Savannah</option>
+                    <option value="ScottishFold">Scottish Fold</option>
+                    <option value="ScottishStraight">Scottish Straight</option>
+                    <option value="SelkirkRexSH">Selkirk Rex SH</option>
+                    <option value="SelkirkRexLH">Selkirk Rex LH</option>
+                    <option value="Serengeti">Serengeti</option>
+                    <option value="Siamese">Siamese</option>
+                    <option value="Siberiancat">Siberian cat</option>
+                    <option value="Singapura">Singapura</option>
+                    <option value="Snowshoe">Snowshoe</option>
+                    <option value="Sokoke">Sokoke</option>
+                    <option value="Somali">Somali</option>
+                    <option value="Sphynx">Sphynx</option>
+                    <option value="Thai">Thai</option>
+                    <option value="Tiffanie">Tiffanie</option>
+                    <option value="TonkaneseSH">Tonkanese SH</option>
+                    <option value="TonkaneseLH">Tonkanese LH</option>
+                    <option value="Toybob">Toybob</option>
+                    <option value="Toyger">Toyger</option>
+                    <option value="TurkishAngora">Turkish Angora</option>
+                    <option value="TurkishVan">Turkish Van</option>
+                    <option value="TurkishVankedisi">Turkish Vankedisi</option>
+                    <option value="UralRexSH">Ural Rex SH</option>
+                    <option value="UralRexLH">Ural Rex LH</option>
+                    <option value="York">York</option>
+                </select>
+                *</label>
+            </div>
+            <div>
+                <p><strong>Тип корма</strong><br><span>Можно выбрать несколько</span></p>
+                <label><input type="checkbox" name="meal" value="meal1" />Сухой корм</label><br>
+                <label><input type="checkbox" name="meal" value="meal2" />Влажный корм</label><br>
+                <label><input type="checkbox" name="meal" value="meal3" />Натуральный корм</label>
+            </div>
+            <p>
+                <strong>Пол животного</strong>*<br>
+                <label for="female">Женский</label><input type="radio" name="sex" value="female" id="female" required/><br>
+                <label for="male">Мужской</label><input type="radio" name="sex" value="male" id="male" required/></p>
+            <p>
+                <label for="comment"><strong>Ваши комментарии</strong></label><br>
+                <textarea maxlength="2000" cols="75" rows="12" id="comment"></textarea></p>
+            <div>
+                <label for="photo"><strong>Прикрепите фотографию вашего питомца</strong></label><br>
+                <input type="file" id="photo" />
+            </div><br>
+            <div><button>Сохранить</button></div>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
