@@ -100,3 +100,16 @@ $text-focus: rgb(161, 160, 160);
     width: auto;
     height: 90%;
 }
+
+.img-amount-container {
+    position: absolute;
+    top: 135px;
+    left: 75%;
+}
+
+.img-amount-label,
+.img-amount {
+    font-family: $default-font;
+    font-size: 16px;
+    color: $text-color;
+}

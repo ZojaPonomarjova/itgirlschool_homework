@@ -95,4 +95,17 @@
   width: auto;
   height: 90%;
 }
+
+.img-amount-container {
+  position: absolute;
+  top: 135px;
+  left: 75%;
+}
+
+.img-amount-label,
+.img-amount {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 16px;
+  color: #636363;
+}
 /*# sourceMappingURL=style.css.map */
