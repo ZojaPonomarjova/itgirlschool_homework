@@ -17,8 +17,8 @@ function getWeatherData(city) {
 
     fetch(`https://api.weatherbit.io/v2.0/current?lat=35.7796&lon=-78.6382&city={` + city + `}&tz=[local]&key=918f35a0040f4384874ef8f0c0a33725`)
         .then(response => response.json())
-        .then(weather => {
-            if(weather != undefined  || weather.data[0] != undefined){
+        .then(weather => {console.dir(weather);
+                        if(weather != undefined  || weather.data[0] != undefined){
             document.querySelector(".main__weather-container").innerHTML = `<div class="weather-container__temperature">
     <span class="weather-container__degrees"></span>
     <span class="weather-container__celsius-degrees">&deg;C</span><br />

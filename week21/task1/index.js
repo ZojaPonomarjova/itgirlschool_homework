@@ -4,7 +4,7 @@ function showCards() {
     let imgAmount = document.querySelector("#img-amount").value;
 if(searchTag != ""){
 
-    fetch(`http://api.giphy.com/v1/gifs/search?q=${searchTag}&api_key=vnduHrCn5R6LunjXtJM7YlPg7k06pG5P&limit=${imgAmount}`)
+    fetch(`https://api.giphy.com/v1/gifs/search?q=${searchTag}&api_key=vnduHrCn5R6LunjXtJM7YlPg7k06pG5P&limit=${imgAmount}`)
         .then(response => response.json())
         .then(cards => {
             // console.log(cards);
