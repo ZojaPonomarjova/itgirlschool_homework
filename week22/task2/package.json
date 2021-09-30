@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chart.js": "^3.5.1",
+    "js-datepicker": "^5.18.0",
     "moment": "^2.29.1"
   }
 }
