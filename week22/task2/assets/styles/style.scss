@@ -1,4 +1,5 @@
 @import "normalize.scss";
+@import 'datepicker.scss';
 @import "fonts.scss";
 
 
@@ -102,12 +103,14 @@
 
 .left-column__cards-block {
     padding: 25px;
-    padding-bottom: 40px;
+    // padding-bottom: 40px;
     width: 50%;
-    max-width: 596px;
+    max-width: 580px;
+    margin-bottom: 50px;
 }
 
-.section__subtitle {
+.section__subtitle,
+label {
     font-family: 'Suprema-semibold', sans-serif;
     margin: 0;
     font-weight: 600;
@@ -119,15 +122,19 @@
 .left-column__card-container {
     display: flex;
     align-items: center;
+    border-right: 1px solid #C7C7C7;
+    padding-right: 10px;
+
 }
 
 .card-container__arrow {
     height: 20px;
+    margin-bottom: 40px;
 }
 
-// .left-column__card {
-//     height: fit-content;
-// }
+.left-column__card {
+    height: 250px;
+}
 
 .card-container__card-img {
     margin: 0 10px;
@@ -136,4 +143,359 @@
 .cards-subtitle {
     margin-left: 20px;
     margin-bottom: 20px;
+}
+
+.card__text {
+    position: relative;
+    top: -130px;
+
+    margin-left: 40px;
+
+    color: white;
+    font-family: 'Lato-medium', sans-serif;
+
+}
+
+.card__card-number {
+    margin-bottom: 40px;
+    font-size: 21px;
+    line-height: 27px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.card__name {
+    font-size: 14px;
+    line-height: 15px;
+    margin-right: 10%;
+}
+
+.left-column__common-data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column__card-data {
+
+    margin-left: 10px;
+    padding-left: 10px;
+    text-align: right;
+}
+
+.card-data__subtitle {
+    font-family: 'Suprema-rerular', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    color: #C7C7C7;
+}
+
+.current-balance__number {
+    font-family: 'Lato-bold', sans-serif;
+    font-size: 31px;
+    line-height: 38px;
+    font-weight: 700;
+    color: #197BBD;
+    margin: 0;
+
+    & span {
+        font-size: 18px;
+    }
+}
+
+.income__number {
+    color: #439A86;
+
+    font-family: 'Lato-semibold', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.outcome__number {
+    color: #BB4430;
+
+    font-family: 'Lato-semibold', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.left-column__transactions-block {
+    padding: 25px;
+    // padding-bottom: 40px;
+    width: 50%;
+    max-width: 580px;
+    height: 200px;
+}
+
+.tr-data__subtitles {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.tr-data__grey-text {
+    font-family: 'Suprema-rerular', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+
+    color: #C7C7C7;
+}
+
+.subtitle1 {
+    display: inline-block;
+    width: 35%;
+}
+
+.subtitle2 {
+    display: inline-block;
+    width: 20%;
+}
+
+.subtitle3 {
+    display: inline-block;
+    width: 25%;
+}
+
+.subtitle4 {
+    display: inline-block;
+    width: 20%;
+}
+
+.tr-data__transaction {
+    display: flex;
+    border-bottom: 1px solid #C7C7C7;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+.tr-data__transaction {
+    font-family: 'Suprema-rerular', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+
+    color: #C7C7C7;
+}
+
+.transaction__details-type {
+    width: 20%;
+}
+
+.transaction__details-date {
+    width: 25%;
+}
+
+.transaction__details-name {
+    width: 35%;
+    color: #404040;
+}
+
+.transaction__details-cost {
+    width: 20%;
+    color: #404040;
+}
+
+
+
+
+.enter-card-block {
+    max-height: fit-content;
+    width: 90%;
+    margin: 0px auto;
+    padding: 50px 60px 0;
+}
+
+.block__title {
+    font-family: 'Suprema-semibold', sans-serif;
+    margin: 0 0 50px 0;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    color: #404040;
+}
+
+.card-number-container__cards-subtitle {
+    margin: 0 0 15px;
+}
+
+.card-container {
+    margin-bottom: 35px;
+}
+
+input,
+select {
+    height: 35px;
+    font-family: 'Suprema-rerular', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    color: #7c7c7c;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid #404040;
+
+    &:hover {
+        border: 1px solid #197BBD;
+    }
+}
+
+.card-number {
+    width: 70px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.card-name {
+    width: 200px;
+
+}
+
+.enter-card__flex-container {
+    display: flex;
+}
+
+.enter-card__img {
+    max-height: 206px;
+    width: auto;
+
+    margin-right: 45px;
+}
+
+.card-date {
+    width: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+.enter-card__button {
+    margin-top: 70px;
+    // margin-left: 10%;
+    // width: 100px;
+    padding: 15px 50px;
+    border-radius: 10px;
+    // height: 35px;
+    border: none;
+    background-color: #197BBD;
+    color: white;
+
+    font-family: 'Suprema-semibold', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.error {
+    font-family: 'Suprema-rerular', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    color: #7c7c7c;
+
+    margin-top: 30px;
+}
+
+.enter-transaction-block {
+    max-height: fit-content;
+    width: 90%;
+    margin: 0px auto;
+    padding: 50px 60px;
+}
+
+.enter-transaction__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    height: 75px;
+    border-radius: 28px;
+    margin-bottom: 30px;
+}
+
+.enter-transaction__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    font-family: 'Suprema-semibold', sans-serif;
+
+    padding: 10px 0;
+    cursor: pointer;
+    // margin: 0 0 50px 0;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    color: #404040;
+    background-color: #a9dafa;
+    box-sizing: border-box;
+}
+
+.btn-active {
+    background-color: #197BBD;
+    color: white;
+}
+
+.left-button {
+    border-radius: 28px 0 0 28px;
+}
+
+.right-button {
+    border-radius: 0 28px 28px 0;
+}
+
+.enter-transaction__card-select {
+    width: 200px;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+    &:disabled {
+        background-color: #C7C7C7;
+    }
+}
+
+.enter-transaction__source-select {
+    width: 15%;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.enter-transaction__card-number-label {
+    margin-right: 35px;
+}
+
+.enter-transaction__source-label {
+    margin-right: 7px;
+}
+
+.enter-transaction__date-select {
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.enter-transaction__date-label {
+    margin-right: 128px;
+}
+
+.enter-transaction__number-input {
+    margin-bottom: 30px;
+    margin-left: 112px;
+}
+
+.enter-transaction__outcome-source-select {
+    margin-left: 45px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.enter-transaction__outcome-block {
+    padding-left: 50%;
 }

@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <title>Cloudcash</title>
 </head>
 
 <body>
     <header class="header">
-        <h2 class="header__title">Еженедельные итоги</h2>
+        <h2 class="header__title" data-tabs-field="summary">Обзор</h2>
+        <h2 class="header__title hidden" data-tabs-field="cards">Карты</h2>
+        <h2 class="header__title hidden" data-tabs-field="transactions">Транзакции</h2>
         <div class="header__account-container">
             <img src="./assets/images/accountlogo.png" alt="Пользователь" class="header__account-img">
             <span class="header__name"></span>
@@ -21,21 +24,22 @@
         <aside class="main__aside">
             <img class="main__logo" src="./assets/images/logo.png" alt="логотип">
             <div class="aside__column">
-                <div class="aside__button aside__button-active">
+                <div class="aside__button aside__button-active summary" data-tabs-handler="summary">
                     <img class="aside-button__icon aside-button__icon-active"
                         src="./assets/images/iconoverview-active.png" alt="обзор" />
                     <span class="aside-button__text aside-button__text-active">Обзор</span>
                 </div>
-                <div class="aside__button">
-                    <img class="aside-button__icon" src="./assets/images/icon-transactions.png" alt="Транзакции" />
+                <div class="aside__button aside__button-transactions" data-tabs-handler="transactions">
+                    <img class="aside-button__icon" src="./assets/images/icon-transactions-active.png"
+                        alt="Транзакции" />
                     <span class="aside-button__text">Транзакции</span>
                 </div>
-                <div class="aside__button">
-                    <img class="aside-button__icon" src="./assets/images/iconcards.png" alt="Карта" />
+                <div class="aside__button" data-tabs-handler="cards">
+                    <img class="aside-button__icon" src="./assets/images/icon-cards-active.png" alt="Карта" />
                     <span class="aside-button__text">Карты</span>
                 </div>
                 <div class="aside__button">
-                    <img class="aside-button__icon" src="./assets/images/icon-goal.png" alt="Цель" />
+                    <img class="aside-button__icon" src="./assets/images/icon-goals-active.png" alt="Цель" />
                     <span class="aside-button__text">Цели</span>
                 </div>
             </div>
@@ -44,38 +48,187 @@
                     alt="Облако" /></div>
         </aside>
         <section class="main__section">
-            <div class="section__left-column">
+            <div class="section__left-column" data-tabs-field="summary">
                 <div class="left-column__cards-block shadow-block">
                     <h3 class="section__subtitle cards-subtitle">Карты</h3>
-                    <div class="left-column__card-container">
-                        <img src="./assets/images/leftArrow.png" alt="стрелка" class="card-container__arrow">
-                        <div class="left-column__card">
-                            <img src="./assets/images/card1.png" alt="Карта" class="card-container__card-img">
-                            <div class="card__text">
-                                <p class="card__card-number"></p>
-                                <p class="card__card-data">
-                                    <span class="card__name"></span>
-                                    <span class="card__date"></span>
-                                </p>
+                    <div class="left-column__common-data">
+                        <div class="left-column__card-container">
+                            <img src="./assets/images/leftArrow.png" alt="стрелка" class="card-container__arrow">
+                            <div class="left-column__card my-slider">
+                                <img src="./assets/images/card1.png" alt="Карта" class="card-container__card-img">
+                                <div class="card__text">
+                                    <p class="card__card-number">1111 1111 1111 1111</p>
+                                    <p class="card__card-data">
+                                        <span class="card__name">unknown</span>
+                                        <span class="card__date">00/00</span>
+                                    </p>
+                                </div>
+                                <!-- <div class="card__text">
+                                    <p class="card__card-number">8651 5678 9012 3456</p>
+                                    <p class="card__card-data">
+                                        <span class="card__name">Джон Доу cnfhbhv</span>
+                                        <span class="card__date">06/21</span>
+                                    </p>
+                                </div> -->
+
                             </div>
-
+                            <img src="./assets/images/rightArrow.png" alt="стрелка" class="card-container__arrow">
                         </div>
-                        <img src="./assets/images/rightArrow.png" alt="стрелка" class="card-container__arrow">
-                    </div>
 
-                    <div class="left-column__card-data">
-                        
+                        <div class="left-column__card-data">
+                            <div class="card-data__current-balance">
+                                <p class="current-balance__number">0 <span>руб</span></p>
+                                <p class="card-data__subtitle">Текущий баланс</p>
+                            </div>
+                            <div class="card-data__income">
+                                <p class="income__number">0 <span>руб</span></p>
+                                <p class="card-data__subtitle">Поступления</p>
+                            </div>
+                            <div class="card-data__outcome">
+                                <p class="outcome__number">0 <span>руб</span></p>
+                                <p class="card-data__subtitle">Списания</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="left-column__transactions-block shadow-block">
+                    <h3 class="section__subtitle transactions-subtitle">Последние транзакции</h3>
+                    <div class="transactions-block__tr-data">
+                        <div class="tr-data__subtitles">
+                            <span class="tr-data__grey-text subtitle1">Получатель</span>
+                            <span class="tr-data__grey-text subtitle2">Тип</span>
+                            <span class="tr-data__grey-text subtitle3">Дата</span>
+                            <span class="tr-data__grey-text subtitle4">Сумма</span>
+                        </div>
+                        <div class="tr-data__transaction">
+                            <div class="transaction__details transaction__details-name">Ресторан</div>
+                            <div class="transaction__details transaction__details-type">Еда</div>
+                            <div class="transaction__details transaction__details-date">01,01,2003</div>
+                            <div class="transaction__details transaction__details-cost"><span
+                                    class="transaction__number">3564</span> <span class="transaction__rubles">руб</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="section__right-column"></div>
 
+
+            <div class="enter-card-block shadow-block  hidden" data-tabs-field="cards">
+
+                <h3 class="block__title">Добавьте новую карту</h3>
+                <div class="enter-card__flex-container">
+                    <div>
+                        <img src="./assets/images/card1.png" alt="Карта" class="enter-card__img">
+                        <br />
+                        <button type="button" class="enter-card__button">Сохранить</button>
+                        <div class="error card-error"></div>
+                    </div>
+                    <div>
+                        <div class="card-number-container card-container">
+                            <h3 class="section__subtitle  card-number-container__cards-subtitle">Номер карты</h3>
+                            <input type="text" name="cardNumber" id="cardNumber1" class="card-number card-input"
+                                maxlength="4" pattern="([0-9]{4})"
+                                oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                            <input type="text" name="cardNumber" id="cardNumber2" class="card-number card-input"
+                                maxlength="4" pattern="([0-9]{4})"
+                                oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                            <input type="text" name="cardNumber" id="cardNumber3" class="card-number card-input"
+                                maxlength="4" pattern="([0-9]{4})"
+                                oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                            <input type="text" name="cardNumber" id="cardNumber4" class="card-number card-input"
+                                maxlength="4" pattern="([0-9]{4})"
+                                oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                        </div>
+
+                        <div class="card-name-container card-container">
+                            <h3 class="section__subtitle  card-number-container__cards-subtitle">Имя владельца</h3>
+                            <input type="text" name="cardName" id="cardName1" class="card-name card-input"
+                                placeholder="Имя">
+                            <input type="text" name="cardName" id="cardName2" class="card-name card-input"
+                                placeholder="Фамилия">
+                        </div>
+                        <div class="card-date-container card-container">
+                            <h3 class="section__subtitle  card-number-container__cards-subtitle">Valid thru</h3>
+                            <input type="text" name="cardDate" id="cardDate1" class="card-date card-input" maxlength="2"
+                                pattern="([0-9]{2})" oninput="this.value=this.value.replace(/[^0-9]/g,'');"> /
+                            <input type="text" name="cardDate" id="cardDate2" class="card-date card-input" maxlength="2"
+                                pattern="([0-9]{2})" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                        </div>
+
+                        <div class="card-balance-container card-container">
+                            <h3 class="section__subtitle  card-number-container__cards-subtitle">Остаток на счете</h3>
+                            <input type="number" name="cardBalance" id="cardBalance" class="card-balance card-input" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="enter-transaction-block shadow-block  hidden" data-tabs-field="transactions">
+                <div class="enter-transaction__buttons shadow-block">
+                    <div class="enter-transaction__btn left-button btn-active">Поступление</div>
+                    <div class="enter-transaction__btn right-button">Списание</div>
+                </div>
+                <div class="enter-transaction__income-block enter-transaction__block">
+                    <label for="cardNumberSelection" class="enter-transaction__card-number-label">Выберите карту</label>
+                    <select name="cardNumberSelection" id="cardNumberSelection" class="enter-transaction__card-select" disabled >
+                        <option value="cardNumber1" class="cardNumber1" selected>1111 1111 1111 1111</option>
+                    </select>
+                    <br />
+                    <label for="sourceSelection" class="enter-transaction__source-label">Выберите источник</label>
+                    <select name="sourceSelection" id="sourceSelection" class="enter-transaction__source-select">
+                        <option value="source1">Зарплата</option>
+                        <option value="source2">Перевод</option>
+                        <option value="source3">Другое</option>
+                    </select>
+                    <br />
+                    <label for="dateSelection" class="enter-transaction__date-label">Дата</label>
+                    <input type="text" name="dateSelection" id="dateSelection" class="enter-transaction__date-select">
+                    <br />
+                    <label for="incomeNumberSelection">Сумма
+                        <input type="number" name="incomeNumberSelection" id="incomeNumberSelection"
+                            class="enter-transaction__number-input"> рублей</label>
+                            <br />
+                        <button type="button" class="enter-card__button">Сохранить</button>
+                </div>
+
+                <div class="enter-transaction__outcome-block  enter-transaction__block hidden">
+                <label for="cardNumberSelection" class="enter-transaction__card-number-label">Выберите карту</label>
+                <select name="cardNumberSelection" id="outcomeCardNumberSelection" class="enter-transaction__card-select" disabled>
+                    <option value="cardNumber1" class="outcomeCardNumber1" selected>1111 1111 1111 1111</option>
+                </select>
+                <br />
+                <label for="outcomeSourceSelection" class="enter-transaction__source-label">Выберите тип</label>
+                <select name="outcomeSourceSelection" id="outcomeSourceSelection" class="enter-transaction__outcome-source-select">
+                    <option value="outcomesource1">Еда</option>
+                    <option value="outcomesource2">Одежда</option>
+                    <option value="outcomesource3">ЖКХ</option>
+                    <option value="outcomesource4">Авто</option>
+                    <option value="outcomesource5">Дети</option>
+                    <option value="outcomesource6">Другое</option>
+
+                </select>
+                <br />
+                <label for="outcomeDateSelection" class="enter-transaction__date-label">Дата</label>
+                <input type="text" name="outcomeDateSelection" id="outcomeDateSelection" class="enter-transaction__date-select">
+                <br />
+                <label for="outcomeNumberSelection">Сумма
+                    <input type="number" name="outcomeNumberSelection" id="outcomeNumberSelection"
+                        class="enter-transaction__number-input"> рублей</label>
+                        <br />
+                        <button type="button" class="enter-card__button">Сохранить</button>
+                    </div>
+                    <div class="error transaction-error"></div>
+            </div>
         </section>
 
     </main>
 
     <script src="./bundle.js"></script>
+    <script src="./index.js"></script>
+
 </body>
 
 </html>
