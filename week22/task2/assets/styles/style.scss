@@ -3,6 +3,8 @@
 
 
 .main {
+    display: flex;
+
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
@@ -23,6 +25,8 @@
 
 .main__section {
     width: 85%;
+    padding-top: 100px;
+    padding-left: 40px;
 }
 
 .header {
@@ -35,6 +39,7 @@
     right: 0;
 
     width: 85%;
+    height: 90px;
 }
 
 .header__title {
@@ -42,6 +47,8 @@
     font-size: 40px;
     line-height: 53px;
     font-weight: 600;
+    margin: 0px;
+    color: #404040;
 }
 
 .main__logo {
@@ -85,4 +92,48 @@
     background-color: #F0F7FF;
     border-radius: 4px;
     color: #197BBD;
+
+}
+
+.shadow-block {
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 28px;
+}
+
+.left-column__cards-block {
+    padding: 25px;
+    padding-bottom: 40px;
+    width: 50%;
+    max-width: 596px;
+}
+
+.section__subtitle {
+    font-family: 'Suprema-semibold', sans-serif;
+    margin: 0;
+    font-weight: 600;
+    font-size: 22;
+    line-height: 25px;
+    color: #404040;
+}
+
+.left-column__card-container {
+    display: flex;
+    align-items: center;
+}
+
+.card-container__arrow {
+    height: 20px;
+}
+
+// .left-column__card {
+//     height: fit-content;
+// }
+
+.card-container__card-img {
+    margin: 0 10px;
+}
+
+.cards-subtitle {
+    margin-left: 20px;
+    margin-bottom: 20px;
 }

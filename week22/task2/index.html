@@ -1,13 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Cloudcash</title>
 </head>
+
 <body>
-    
+    <header class="header">
+        <h2 class="header__title">Еженедельные итоги</h2>
+        <div class="header__account-container">
+            <img src="./assets/images/accountlogo.png" alt="Пользователь" class="header__account-img">
+            <span class="header__name"></span>
+        </div>
+    </header>
+    <main class="main">
+        <aside class="main__aside">
+            <img class="main__logo" src="./assets/images/logo.png" alt="логотип">
+            <div class="aside__column">
+                <div class="aside__button aside__button-active">
+                    <img class="aside-button__icon aside-button__icon-active"
+                        src="./assets/images/iconoverview-active.png" alt="обзор" />
+                    <span class="aside-button__text aside-button__text-active">Обзор</span>
+                </div>
+                <div class="aside__button">
+                    <img class="aside-button__icon" src="./assets/images/icon-transactions.png" alt="Транзакции" />
+                    <span class="aside-button__text">Транзакции</span>
+                </div>
+                <div class="aside__button">
+                    <img class="aside-button__icon" src="./assets/images/iconcards.png" alt="Карта" />
+                    <span class="aside-button__text">Карты</span>
+                </div>
+                <div class="aside__button">
+                    <img class="aside-button__icon" src="./assets/images/icon-goal.png" alt="Цель" />
+                    <span class="aside-button__text">Цели</span>
+                </div>
+            </div>
+
+            <div class="aside__img-container"><img class="aside__img" src="./assets/images/cloudwithcards.png"
+                    alt="Облако" /></div>
+        </aside>
+        <section class="main__section">
+            <div class="section__left-column">
+                <div class="left-column__cards-block shadow-block">
+                    <h3 class="section__subtitle cards-subtitle">Карты</h3>
+                    <div class="left-column__card-container">
+                        <img src="./assets/images/leftArrow.png" alt="стрелка" class="card-container__arrow">
+                        <div class="left-column__card">
+                            <img src="./assets/images/card1.png" alt="Карта" class="card-container__card-img">
+                            <div class="card__text">
+                                <p class="card__card-number"></p>
+                                <p class="card__card-data">
+                                    <span class="card__name"></span>
+                                    <span class="card__date"></span>
+                                </p>
+                            </div>
+
+                        </div>
+                        <img src="./assets/images/rightArrow.png" alt="стрелка" class="card-container__arrow">
+                    </div>
+
+                    <div class="left-column__card-data">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="section__right-column"></div>
+
+        </section>
+
+    </main>
+
     <script src="./bundle.js"></script>
 </body>
+
 </html>
