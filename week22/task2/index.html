@@ -96,24 +96,27 @@
                     <h3 class="section__subtitle transactions-subtitle">Последние транзакции</h3>
                     <div class="transactions-block__tr-data">
                         <div class="tr-data__subtitles">
-                            <span class="tr-data__grey-text subtitle1">Получатель</span>
                             <span class="tr-data__grey-text subtitle2">Тип</span>
                             <span class="tr-data__grey-text subtitle3">Дата</span>
                             <span class="tr-data__grey-text subtitle4">Сумма</span>
                         </div>
                         <div class="tr-data__transaction">
-                            <div class="transaction__details transaction__details-name">Ресторан</div>
-                            <div class="transaction__details transaction__details-type">Еда</div>
+
+                            <!-- <div class="transaction__details transaction__details-type">Еда</div>
                             <div class="transaction__details transaction__details-date">01,01,2003</div>
                             <div class="transaction__details transaction__details-cost"><span
                                     class="transaction__number">3564</span> <span class="transaction__rubles">руб</span>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="section__right-column"></div>
+            <div class="section__right-column" data-tabs-field="summary">
+                <canvas class="right-column__graph shadow-block" id="myChart">
+
+                </canvas>
+            </div>
 
 
             <div class="enter-card-block shadow-block  hidden" data-tabs-field="cards">
@@ -123,7 +126,7 @@
                     <div>
                         <img src="./assets/images/card1.png" alt="Карта" class="enter-card__img">
                         <br />
-                        <button type="button" class="enter-card__button">Сохранить</button>
+                        <button type="button" class="enter-card__button" id="enterCardBtn">Сохранить</button>
                         <div class="error card-error"></div>
                     </div>
                     <div>
@@ -178,20 +181,20 @@
                     </select>
                     <br />
                     <label for="sourceSelection" class="enter-transaction__source-label">Выберите источник</label>
-                    <select name="sourceSelection" id="sourceSelection" class="enter-transaction__source-select">
-                        <option value="source1">Зарплата</option>
-                        <option value="source2">Перевод</option>
-                        <option value="source3">Другое</option>
+                    <select name="sourceSelection" id="sourceSelection" class="enter-transaction__source-select income-input">
+                        <option value="Зарплата">Зарплата</option>
+                        <option value="Перевод">Перевод</option>
+                        <option value="Другое">Другое</option>
                     </select>
                     <br />
                     <label for="dateSelection" class="enter-transaction__date-label">Дата</label>
-                    <input type="text" name="dateSelection" id="dateSelection" class="enter-transaction__date-select">
+                    <input type="text" name="dateSelection" id="dateSelection" class="enter-transaction__date-select  income-input">
                     <br />
                     <label for="incomeNumberSelection">Сумма
                         <input type="number" name="incomeNumberSelection" id="incomeNumberSelection"
-                            class="enter-transaction__number-input"> рублей</label>
+                            class="enter-transaction__number-input  income-input"> рублей</label>
                             <br />
-                        <button type="button" class="enter-card__button">Сохранить</button>
+                        <button type="button" class="enter-card__button" id="incomeBtn">Сохранить</button>
                 </div>
 
                 <div class="enter-transaction__outcome-block  enter-transaction__block hidden">
@@ -201,24 +204,24 @@
                 </select>
                 <br />
                 <label for="outcomeSourceSelection" class="enter-transaction__source-label">Выберите тип</label>
-                <select name="outcomeSourceSelection" id="outcomeSourceSelection" class="enter-transaction__outcome-source-select">
-                    <option value="outcomesource1">Еда</option>
-                    <option value="outcomesource2">Одежда</option>
-                    <option value="outcomesource3">ЖКХ</option>
-                    <option value="outcomesource4">Авто</option>
-                    <option value="outcomesource5">Дети</option>
-                    <option value="outcomesource6">Другое</option>
+                <select name="outcomeSourceSelection" id="outcomeSourceSelection" class="enter-transaction__outcome-source-select outcome-input">
+                    <option value="Еда">Еда</option>
+                    <option value="Одежда">Одежда</option>
+                    <option value="ЖКХ">ЖКХ</option>
+                    <option value="Авто">Авто</option>
+                    <option value="Дети">Дети</option>
+                    <option value="Другое">Другое</option>
 
                 </select>
                 <br />
                 <label for="outcomeDateSelection" class="enter-transaction__date-label">Дата</label>
-                <input type="text" name="outcomeDateSelection" id="outcomeDateSelection" class="enter-transaction__date-select">
+                <input type="text" name="outcomeDateSelection" id="outcomeDateSelection" class="enter-transaction__date-select outcome-input">
                 <br />
                 <label for="outcomeNumberSelection">Сумма
                     <input type="number" name="outcomeNumberSelection" id="outcomeNumberSelection"
-                        class="enter-transaction__number-input"> рублей</label>
+                        class="enter-transaction__number-input outcome-input"> рублей</label>
                         <br />
-                        <button type="button" class="enter-card__button">Сохранить</button>
+                        <button type="button" class="enter-card__button" id="outcomBtn">Сохранить</button>
                     </div>
                     <div class="error transaction-error"></div>
             </div>

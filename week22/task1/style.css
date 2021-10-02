@@ -1,0 +1,112 @@
+.main__title {
+  font-size: 45px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 45px;
+  color: #636363;
+}
+
+.main__input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main__input {
+  width: 300px;
+  height: 40px;
+  margin-right: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.main__input:focus {
+  background-color: aliceblue;
+  color: #a1a0a0;
+}
+
+.main__button {
+  width: 100px;
+  height: 45px;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  background-color: #636363;
+  border: none;
+  cursor: pointer;
+}
+
+.main__button:hover {
+  background-color: #a1a0a0;
+}
+
+.main__button:active {
+  color: #636363;
+  background-color: #a1a0a0;
+}
+
+.main__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+  color: #a1a0a0;
+  text-align: center;
+}
+
+.main__little-container {
+  height: 300px;
+  width: auto;
+  margin: 10px;
+}
+
+.main__link {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+  color: #636363;
+  text-decoration: none;
+  margin-bottom: 25px;
+}
+
+.main__link:hover {
+  color: #a1a0a0;
+}
+
+.main__link:visited {
+  color: #a1a0a0;
+}
+
+.main__img {
+  width: auto;
+  height: 90%;
+}
+
+.img-amount-container {
+  position: absolute;
+  top: 135px;
+  left: 75%;
+}
+
+.img-amount-label,
+.img-amount {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 16px;
+  color: #636363;
+}
+
+/*# sourceMappingURL=style.css.map */

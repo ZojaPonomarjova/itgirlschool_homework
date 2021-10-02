@@ -1,36 +1,31 @@
-// const moment = require('moment');
+//             document.querySelector(".current-balance__number").innerHTML = `${localStorage.getItem("#")} <span>руб</span>`
+//         if(localStorage.getItem("#")){
+//             document.querySelector(".income__number").innerHTML = `${localStorage.getItem("#")} <span>руб</span>`}
+//         
 
-// let date = moment();
-// console.log(date);
+function calcOutcomeSum(){
+            let sumTransactions = 0;
+            if (localStorage.getItem("outcomeIndex") > 1){
+                    for (let i=0; i<localStorage.length; i++){
+        sumTransactions += Number(localStorage.getItem(`outcomeNumberSelection${i}`));
+        
+        }
+        return finalOutcomeTransactions = sumTransactions;
+    }
+}
 
-const btns = document.querySelectorAll(".enter-transaction__btn");
-const transactionInputs = document.querySelectorAll(".enter-transaction__block");
+document.querySelector(".outcome__number").innerHTML = `${calcOutcomeSum()} <span>руб</span>`
 
-
-btns.forEach((btnItem, index) => {
-    btnItem.addEventListener('click', () =>{
-        btns.forEach((btnItem) => {
-            btnItem.classList.remove('btn-active');
-        })
-        btnItem.classList.add('btn-active');
-        transactionInputs.forEach((transactionInput) =>{
-            transactionInput.classList.add('hidden');
-        })
-        transactionInputs[index].classList.remove('hidden');
-    })
-})
-
-function checkStorage(){
-if(localStorage.getItem("cardNumber1") === null){
-document.querySelector(".transaction-error").innerHTML = "Сначала внесите данные карты";
-}else{
-    document.querySelector(".transaction-error").innerHTML = "";
-    document.getElementById("cardNumberSelection").removeAttribute("disabled");
-    document.getElementById("outcomeCardNumberSelection").removeAttribute("disabled");
-    document.querySelector(".outcomeCardNumber1").innerHTML = `${localStorage.getItem("cardNumber1")}  ${localStorage.getItem("cardNumber2")} ${localStorage.getItem("cardNumber3")} ${localStorage.getItem("cardNumber4")}`
-    document.querySelector(".cardNumber1").innerHTML = `${localStorage.getItem("cardNumber1")}  ${localStorage.getItem("cardNumber2")} ${localStorage.getItem("cardNumber3")} ${localStorage.getItem("cardNumber4")}`
-
+function calcIncomeSum(){
+    let sumTransactions = 0;
+    if (localStorage.getItem("index") > 1){
+            for (let i=0; i<localStorage.length; i++){
+sumTransactions += Number(localStorage.getItem(`incomeNumberSelection${i}`));
 
 }
+return finalOutcomeTransactions = sumTransactions;
 }
-document.querySelector(".aside__button-transactions").addEventListener('click', checkStorage);
+}
+
+document.querySelector(".income__number").innerHTML = `${calcIncomeSum()} <span>руб</span>`
+document.querySelector(".current-balance__number").innerHTML = `${+localStorage.getItem("cardBalance") + calcIncomeSum() - calcOutcomeSum()} <span>руб</span>`
