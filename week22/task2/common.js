@@ -5,13 +5,13 @@ require('moment/locale/ru');
 
 const Chart = require('Chart.js');
 
- let incomeDate = datepicker(document.getElementById("dateSelection"), {
+let incomeDate = datepicker(document.getElementById("dateSelection"), {
     startDay: 1,
     customDays: ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'],
     customMonths: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
 });
 
- let outcomeDate = datepicker(document.getElementById("outcomeDateSelection"), {
+let outcomeDate = datepicker(document.getElementById("outcomeDateSelection"), {
     startDay: 1,
     customDays: ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'],
     customMonths: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
@@ -79,7 +79,7 @@ let calcOutcomeSum = () => {
             sumTransactions += Number(localStorage.getItem(`outcomeNumberSelection${i}`));
 
         }
-        
+
     }
     return sumTransactions;
 }
@@ -91,7 +91,7 @@ let calcIncomeSum = () => {
         for (let i = 0; i < localStorage.length; i++) {
             sumTransactions += Number(localStorage.getItem(`incomeNumberSelection${i}`));
         }
-        
+
     }
     return sumTransactions;
 }
@@ -148,13 +148,14 @@ function editCardData() {
         cardOutcomeSum = 0
     }
 
-let cardIncomeSum = calcIncomeSum();
+    let cardIncomeSum = calcIncomeSum();
 
-if(cardIncomeSum === undefined){
-    cardIncomeSum = 0
-} else {document.querySelector(".income__number").innerHTML = `${cardIncomeSum} <span>руб</span>`
+    if (cardIncomeSum === undefined) {
+        cardIncomeSum = 0
+    } else {
+        document.querySelector(".income__number").innerHTML = `${cardIncomeSum} <span>руб</span>`
     }
-    
+
 
 
     document.querySelector(".current-balance__number").innerHTML = `${+localStorage.getItem("cardBalance") + cardIncomeSum - cardOutcomeSum} <span>руб</span>`
@@ -223,7 +224,6 @@ function rememberTransaction() {
         index++
         localStorage.setItem('index', index);
     }
-// console.log(incomeDate.dateSelected);
 
 }
 
@@ -257,6 +257,7 @@ function rememberOutcomeTransaction() {
         outcomeIndex++
         localStorage.setItem('outcomeIndex', outcomeIndex);
     }
+
     // console.log(outcomeDate.dateSelected);
 }
 
@@ -272,7 +273,7 @@ function showTransactions() {
             let type = localStorage.getItem(`outcomeSourceSelection${i}`);
             let sum = localStorage.getItem(`outcomeNumberSelection${i}`);
 
-            let date = moment(localStorage.getItem(`outcomeDateSelection${i}`)).locale('ru');
+            let date = moment(localStorage.getItem(`outcomeDateSelection${i}`));
             date = date.format('L');
             if (type && sum) {
 
@@ -285,11 +286,26 @@ function showTransactions() {
             }
         }
     }
-    // myChart.update();
-    // console.log(myChart);
+
 }
 
 document.addEventListener("DOMContentLoaded", showTransactions);
 document.querySelector(".summary").addEventListener("click", showTransactions);
 
 
+function chartUpdate(){
+const sum1 = parseInt(document.querySelector(".income__number").innerHTML.replace(/[^\d]/g, ''));
+    const sum2 = parseInt(document.querySelector(".outcome__number").innerHTML.replace(/[^\d]/g, ''));
+    myChart.data.datasets = [{
+        label: "Сумма всех операций",
+        data: [sum1, sum2],
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: '#197BBD',
+        borderWidth: 1,
+    }];
+    
+    myChart.update();
+}
+
+
+document.querySelector(".summary").addEventListener("click", chartUpdate);

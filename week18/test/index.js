@@ -112,10 +112,10 @@
 // let date = new Date( Date.parse('2012-01-26T13:51:50.417-07:00') );
 
 // alert(date);
-let sunriseTime = new Date(1631847910*1000);
-let hours = sunriseTime.getHours();
-let minutes = sunriseTime.getMinutes();
-console.log( hours +":" + minutes);
+// let sunriseTime = new Date(1631847910*1000);
+// let hours = sunriseTime.getHours();
+// let minutes = sunriseTime.getMinutes();
+// console.log( hours +":" + minutes);
 
 
 // multiplied by 1000 so that the argument is in milliseconds, not seconds.
@@ -130,3 +130,17 @@ console.log( hours +":" + minutes);
     
 // console.log(formattedTime);
 
+
+
+// let user = undefined;
+try{
+    if(!parseInt('ыыыы')){
+        throw new ReferenceError("Некорректные данные");
+    }
+    console.log(parseInt('ыыыы'));
+
+}
+catch(e){
+    console.log(e);
+    alert( e.message );
+}
