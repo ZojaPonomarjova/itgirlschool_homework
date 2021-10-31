@@ -1,0 +1,12 @@
+.pie-chart {
+  width: 500px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+}
+/*# sourceMappingURL=app1.css.map */
