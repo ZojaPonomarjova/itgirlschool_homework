@@ -1,4 +1,4 @@
-import './app1.css';
+import './style/app1.css';
 import { Pie } from 'react-chartjs-2';
 
 const data = {
