@@ -2,8 +2,7 @@ body {
     background-color: #daede7;
 }
 
-.main,
-.header {
+.main {
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 40px;
@@ -27,8 +26,3 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
-// .rating__item:checked,
-// .rating__item:checked~.rating__label {
-//     color: #ffd300;
-// }

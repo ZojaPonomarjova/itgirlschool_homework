@@ -2,8 +2,7 @@ body {
   background-color: #daede7;
 }
 
-.main,
-.header {
+.main {
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 40px;

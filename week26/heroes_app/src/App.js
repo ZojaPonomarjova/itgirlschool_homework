@@ -1,6 +1,5 @@
 import './App.css';
 import superHeroes from './components/json/jsonHeroes';
-// import './components/card'
 import Card from './components/card/Card';
 
 
