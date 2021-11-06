@@ -1,5 +1,5 @@
 .card {
-  FONT-VARIANT: JIS04;
+  font-variant: JIS04;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
