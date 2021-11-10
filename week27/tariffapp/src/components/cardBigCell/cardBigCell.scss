@@ -1,0 +1,26 @@
+.card-info {
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.currency {
+  font-size: 12px;
+  padding-right: 10px;
+  padding-top: 30px;
+  align-self: flex-start;
+}
+
+.amount {
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.period {
+  font-size: 12px;
+  padding-left: 10px;
+  align-self: flex-end;
+  padding-bottom: 30px;
+}
