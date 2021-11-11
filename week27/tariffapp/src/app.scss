@@ -1,23 +1,9 @@
 .App {
   display: flex;
   justify-content: center;
+  margin: 40px auto;
 }
 
 body {
   background-color: #faf8f6;
-}
-
-.card {
-  width: 250px;
-  border: 1px solid white;
-  text-align: center;
-
-  div {
-    padding: 20px;
-  }
-
-  div:not(:last-child) {
-    border-bottom: 1px solid white;
-    padding: 10px;
-  }
 }

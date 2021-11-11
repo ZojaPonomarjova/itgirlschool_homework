@@ -17,11 +17,12 @@
     "sourceType": "module"
   },
   "plugins": ["react"],
+  "ignorePatterns": ["webpack.config.js"],
   "rules": {
     "no-console": "off",
     "no-var": "error",
     "semi": "error",
-    // "indent": "error",
+    "no-unused-vars": "warn",
     "no-multi-spaces": "error",
     "space-in-parens": "error",
     "no-multiple-empty-lines": "error",

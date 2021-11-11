@@ -1,11 +1,11 @@
-import './cardBigCell.scss';
+import styles from "./cardBigCell.module.scss";
 
-function CardBigCell({ currency, amount, period }) {
+function CardBigCell({ currency, amount, period, id, className }) {
   return (
-    <div className="card-info">
-      <span className="currency">{currency}</span>
-      <span className="amount">{amount}</span>
-      <span className="period">{period}</span>
+    <div className={`${styles.cardInfo} ${className}`} id={id}>
+      <span className={styles.currency}>{currency}</span>
+      <span className={styles.amount}>{amount}</span>
+      <span className={styles.period}>{period}</span>
     </div>
   );
 }
