@@ -1,11 +1,11 @@
 import React from "react";
-import "./cards.scss";
+import "./tariffs.scss";
 import CardBigCell from "../cardBigCell/cardBigCell";
 import CardCell from "../cardCell/cardCell";
 
 import classnames from "classnames";
 
-const cards = [
+const tariffs = [
   [
     [{ text: "Безлимитный 300" }, { id: "300-1" }],
     [{ text: "До 10 Мбит/сек" }, { id: "300-2" }],
@@ -52,11 +52,11 @@ const cards = [
   ],
 ];
 
-function Cards() {
+function Tariffs() {
   let className;
   return (
     <React.Fragment>
-      {cards.map((card, i) => (
+      {tariffs.map((card, i) => (
         <div
           className={
             (className = classnames("card", {
@@ -108,4 +108,4 @@ function Cards() {
   );
 }
 
-export default Cards;
+export default Tariffs;

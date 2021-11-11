@@ -1,10 +1,10 @@
 import "./app.scss";
-import Cards from "./components/cards/cards";
+import Tariffs from "./components/tariffs/tariffs";
 
 function App() {
   return (
     <div className="App">
-      <Cards />
+      <Tariffs />
     </div>
   );
 }
