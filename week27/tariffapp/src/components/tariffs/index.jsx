@@ -1,6 +1,6 @@
 import "./tariff.scss";
-import CardBigCell from "../cardBigCell/cardBigCell";
-import CardCell from "../cardCell/cardCell";
+import CardBigCell from "../cardBigCell";
+import CardCell from "../cardCell";
 
 function Tariffs(props) {
   let className;

@@ -1,6 +1,6 @@
 import React from "react";
 import "./tariffContainer.scss";
-import Tariff from "../tariffs/tariff";
+import Tariff from "../tariffs";
 
 import classnames from "classnames";
 

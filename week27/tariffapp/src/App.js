@@ -1,5 +1,5 @@
 import "./app.scss";
-import TariffContainer from "./components/tariffContainer/tariffContainer";
+import TariffContainer from "./components/tariffContainer";
 
 function App() {
   return (
