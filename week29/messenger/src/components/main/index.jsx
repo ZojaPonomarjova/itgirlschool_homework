@@ -13,11 +13,11 @@ const Main = () => {
 
   const [array, setArray] = useState([]);
 
-  const saveFunction = () => {
+  const handleSend = () => {
     const finalMessage = value.replace(/ +/g, " ").trim();
     if (finalMessage) {
       setArray([finalMessage.replace(/(\r\n|\n|\r)/gm, ""), ...array]);
-      console.log(array);
+      // console.log(array);
     } else {
       setValue("");
       return;
@@ -44,7 +44,7 @@ const Main = () => {
 
         <MessageInput
           value={value}
-          onClick={saveFunction}
+          onClick={handleSend}
           onChange={handleChange}
         />
       </main>
