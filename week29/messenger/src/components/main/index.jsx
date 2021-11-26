@@ -16,7 +16,7 @@ const Main = () => {
   const handleSend = () => {
     const finalMessage = value.replace(/ +/g, " ").trim();
     if (finalMessage) {
-      setArray([finalMessage.replace(/(\r\n|\n|\r)/gm, ""), ...array]);
+      setArray([finalMessage, ...array]);
       // console.log(array);
     } else {
       setValue("");
