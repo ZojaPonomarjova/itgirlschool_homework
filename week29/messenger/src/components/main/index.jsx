@@ -2,21 +2,24 @@ import "./main.scss";
 import MessageInput from "../messageInput";
 import { useState } from "react";
 import Message from "../message";
-import classnames from "classnames";
 
 const Main = () => {
   const [value, setValue] = useState("");
 
   const handleChange = e => {
-    setValue(e.target.value.replace(/(\r\n|\n|\r)/gm, ""));
+    setValue(
+      e.target.value
+        .replace(/(\r\n|\n|\r)/gm, "")
+        .replace(/ +/g, " ")
+        .trim(),
+    );
   };
 
   const [array, setArray] = useState([]);
 
   const handleSend = () => {
-    const finalMessage = value.replace(/ +/g, " ").trim();
-    if (finalMessage) {
-      setArray([finalMessage, ...array]);
+    if (value) {
+      setArray([value, ...array]);
       // console.log(array);
     } else {
       setValue("");
@@ -32,13 +35,7 @@ const Main = () => {
         <div className="main__header"></div>
         <div className="main__messages">
           {array.map((message, index) => (
-            <Message
-              key={index}
-              text={message}
-              className={classnames("", {
-                message_first: index === 0,
-              })}
-            />
+            <Message key={index} text={message} isFirst={index === 0} />
           ))}
         </div>
 
